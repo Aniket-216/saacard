@@ -11,11 +11,13 @@ export default function GlobalStyles() {
                 html: {
                     margin: 0,
                     padding: 0,
+                    height: "100%",
                     scrollBehavior: "smooth",
                 },
                 body: {
                     margin: 0,
                     padding: 0,
+                    height: "100%",
                     backgroundColor: theme.palette.common.black,
                     WebkitFontSmoothing: "antialiased",
                     fontFamily: ["Poppins", "Montserrat"].join(","),

@@ -19,11 +19,15 @@ export default function Button(theme: Theme) {
                 root: {
                     textTransform: "none",
                     borderRadius: 100,
-                    padding: "15px 40px",
+                    padding: "10px 40px",
                     "&:focus": {
                         outline: "none",
                     },
                     color: theme.palette.common.white,
+                    "&:hover": {
+                        backgroundColor: theme.palette.common.white,
+                        color: theme.palette.common.black,
+                    },
                 },
 
                 sizeMedium: {

@@ -5,7 +5,7 @@ export default function Typography(theme: Theme) {
         MuiTypography: {
             styleOverrides: {
                 root: {
-                    color: theme.palette.primary.dark,
+                    color: theme.palette.primary.main,
                 },
                 paragraph: {
                     marginBottom: theme.spacing(2),

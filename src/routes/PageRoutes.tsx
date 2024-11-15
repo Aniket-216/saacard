@@ -10,7 +10,7 @@ export const PageRoutes = createBrowserRouter([
         element: <App />,
         children: [
             {
-                path: "/",
+                index: true,
                 element: <HomePage />,
             },
             {

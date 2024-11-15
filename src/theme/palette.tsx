@@ -20,21 +20,28 @@ export const COMMON = {
 };
 
 export const PRIMARY = {
-    light: "##FFFFFF99",
-    main: "#ffffff",
-    dark: "#FFFFFFCC",
-    contrastText: "#ffffff",
+    light: "rgb(63, 61, 93)",
+    main: "#100d35",
+    dark: "rgb(11, 9, 37)",
+    contrastText: "#fff",
+};
+export const SECONDARY = {
+    light: "rgb(139, 51, 238)",
+    main: "#6f01ea",
+    dark: "rgb(77, 0, 163)",
+    contrastText: "#fff",
 };
 
 export const palette = {
     common: COMMON,
     primary: PRIMARY,
+    secondary: SECONDARY,
     grey: GREY,
     divider: alpha(GREY[500], 0.24),
     text: {
-        primary: GREY[800],
-        secondary: GREY[600],
-        disabled: GREY[500],
+        primary: "rgba(0, 0, 0, 0.87)",
+        secondary: "rgba(0, 0, 0, 0.54)",
+        disabled: "rgba(0, 0, 0, 0.38)",
     },
     background: {
         paper: "#fff",

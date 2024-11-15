@@ -23,9 +23,9 @@ export const navItems: NavItem[] = [
         link: "/banking",
         children: [
             { label: "Payouts", link: "/payouts" },
-            { label: "Vendor Payments", link: "/vendor-payments" },
-            { label: "Current Accounts", link: "/current-accounts" },
-            { label: "Cash Management", link: "/cash-management" },
+            { label: "Vendor Payments", link: "/banking/vendor-payments" },
+            { label: "Current Accounts", link: "/banking/current-accounts" },
+            { label: "Cash Management", link: "/banking/cash-management" },
         ],
     },
     { label: "Payroll", link: "/payroll" },
@@ -33,8 +33,8 @@ export const navItems: NavItem[] = [
         label: "Resources",
         link: "/resources",
         children: [
-            { label: "GST Solutions", link: "/gst-solutions" },
-            { label: "Accounting", link: "/accounting" },
+            { label: "GST Solutions", link: "/resources/gst-solutions" },
+            { label: "Accounting", link: "/resources/accounting" },
         ],
     },
     { label: "Pricing", link: "/pricing" },

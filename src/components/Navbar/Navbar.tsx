@@ -58,19 +58,21 @@ const NavList = ({ ...props }) => {
                     }
                     onMouseLeave={() => handleMenuClose(navItem.label)}
                 >
-                    <Button
-                        aria-haspopup="true"
-                        sx={{ color: "white" }}
-                        onClick={(e) =>
-                            handleMenuOpen(
-                                e,
-                                navItem.label,
-                                Boolean(navItem.children),
-                            )
-                        }
-                    >
-                        {navItem.label}
-                    </Button>
+                    <Link to={navItem.link} style={{ textDecoration: "none" }}>
+                        <Button
+                            aria-haspopup="true"
+                            sx={{ color: "white" }}
+                            onClick={(e) =>
+                                handleMenuOpen(
+                                    e,
+                                    navItem.label,
+                                    Boolean(navItem.children),
+                                )
+                            }
+                        >
+                            {navItem.label}
+                        </Button>
+                    </Link>
                     {navItem.children && (
                         <Menu
                             anchorEl={anchorEls.get(navItem.label)}
@@ -160,12 +162,13 @@ const Navbar: React.FC = () => {
             <CssBaseline />
             <AppBar
                 sx={{
-                    background: "rgba(0, 0, 0, 0)",
+                    backgroundImage:
+                        "linear-gradient(106deg, #110d34, #9e54f0)",
                     mb: 0,
                 }}
                 position="static"
             >
-                <Container>
+                <Container maxWidth="xl">
                     <Toolbar>
                         <Stack
                             direction="row"

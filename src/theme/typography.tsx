@@ -70,7 +70,7 @@ export function responsiveFontSizes({
 }
 
 const typography: Typography = {
-    fontFamily: ["Poppins", "Montserrat"].join(","),
+    fontFamily: ["Generalsans", "sans-serif"].join(","),
     fontWeightRegular: 300,
     fontWeightMedium: 500,
     fontWeightBold: 600,
@@ -105,7 +105,7 @@ const typography: Typography = {
         ...responsiveFontSizes({ sm: 22, md: 25, lg: 30, xl: 32, xxl: 36 }),
     },
     h6: {
-        fontWeight: 400,
+        fontWeight: 600,
         fontSize: pxToRem(20),
         lineHeight: 1.1,
         ...responsiveFontSizes({ sm: 12, md: 15, lg: 18, xl: 20, xxl: 24 }),
@@ -116,7 +116,7 @@ const typography: Typography = {
         lineHeight: 1.1,
     },
     subtitle2: {
-        fontWeight: 400,
+        fontWeight: 500,
         fontSize: pxToRem(18),
         lineHeight: 22 / 14,
     },
