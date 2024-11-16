@@ -39,10 +39,10 @@ const NavList = ({ ...props }) => {
     return (
         <Stack
             direction={{ xs: "column", sm: "row" }}
-            gap={3}
-            ml={{ xs: 3, sm: 0 }}
-            mt={{ xs: 3, sm: 0 }}
-            width={{ xs: "150px", sm: "initial" }}
+            // gap={3}
+            // ml={{ xs: 3, sm: 0 }}
+            // mt={{ xs: 3, sm: 0 }}
+            // width={{ xs: "150px", sm: "initial" }}
             {...props}
         >
             {/* Map the navItems without storing them in state */}
@@ -141,7 +141,7 @@ const Nav = () => {
                 onClose={toggleDrawer(false)}
                 anchor="right"
                 sx={{
-                    display: { xs: "inherit", sm: "none" },
+                    display: { xs: "inherit", md: "none" },
                 }}
             >
                 <NavList />
@@ -149,7 +149,7 @@ const Nav = () => {
             {/* Desktop Menu */}
             <NavList
                 sx={{
-                    display: { xs: "none", sm: "inherit" },
+                    display: { xs: "none", md: "inherit" },
                 }}
             />
         </>
@@ -164,7 +164,6 @@ const Navbar: React.FC = () => {
                 sx={{
                     backgroundImage:
                         "linear-gradient(106deg, #110d34, #9e54f0)",
-                    mb: 0,
                 }}
                 position="static"
             >

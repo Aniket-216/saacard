@@ -5,17 +5,16 @@ function Accordion(theme: Theme) {
         MuiAccordion: {
             styleOverrides: {
                 root: {
-                    backgroundColor: theme.palette.grey[200],
-                    padding: 30,
-
+                    backgroundColor: "#e5e2ff",
+                    padding: "15px 20px",
                     borderRadius: "30px !important",
-                    marginBottom: 20,
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     "&.Mui-expanded": {
-                        backgroundColor: theme.palette.common.white,
+                        backgroundColor: "#e5e2ff",
                         boxShadow: "0px 10px 50px 0px rgba(0, 0, 0, 0.10)",
-                    },
-                    "& .MuiSvgIcon-root": {
-                        color: theme.palette.primary.dark,
+                        transform:
+                            "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                        transformStyle: "preserve-3d",
                     },
                     "&:before": {
                         display: "none",

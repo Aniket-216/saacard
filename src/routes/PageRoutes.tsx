@@ -3,6 +3,7 @@ import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import App from "../App";
 import ContactUsPage from "../pages/ContactUsPage";
+import FaqPage from "../pages/FaqPage";
 
 export const PageRoutes = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ export const PageRoutes = createBrowserRouter([
             {
                 path: "company/about",
                 element: <AboutPage />,
+            },
+            {
+                path: "company/faq",
+                element: <FaqPage />,
             },
             {
                 path: "company/contact",

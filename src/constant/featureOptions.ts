@@ -20,3 +20,31 @@ export const featureTools: FeatureTools[] = [
             "Scale your business effortlessly with our comprehensive API-driven automation, eliminating the need for manual intervention.",
     },
 ];
+
+export interface ShortGstServiceProps {
+    title: string;
+    caption: string;
+}
+
+export const shortGstService: ShortGstServiceProps[] = [
+    {
+        title: "GSTR-In (Goods and Services Tax Return - Input):",
+        caption:
+            "Businesses utilizing the payment gateway use this component for tracking and reporting input tax credits on purchases, ensuring GST compliance.",
+    },
+    {
+        title: "Invoice:",
+        caption:
+            "The payment gateway generates detailed transaction records for every processed payment, which businesses rely on for accounting, taxation, and legal purposes.",
+    },
+    {
+        title: "E-way Bill:",
+        caption:
+            "The payment gateway mandates the use of this digital document for tracking goods in transit, ensuring regulatory compliance and efficient logistics management.",
+    },
+    {
+        title: "TDS (Tax Deducted at Source):",
+        caption:
+            "Businesses using the payment gateway withhold a portion of payments to vendors to ensure tax compliance, accurately report tax deductions, and meet legal obligations.",
+    },
+];

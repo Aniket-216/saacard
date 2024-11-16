@@ -7,17 +7,20 @@ export default function GlobalStyles() {
             styles={{
                 "*": {
                     boxSizing: "border-box",
+                    // outline: "1px solid green",
                 },
                 html: {
                     margin: 0,
                     padding: 0,
                     height: "100%",
+                    width: "100%",
                     scrollBehavior: "smooth",
                 },
                 body: {
                     margin: 0,
                     padding: 0,
                     height: "100%",
+                    width: "100%",
                     backgroundColor: theme.palette.common.black,
                     WebkitFontSmoothing: "antialiased",
                     fontFamily: ["Poppins", "Montserrat"].join(","),
