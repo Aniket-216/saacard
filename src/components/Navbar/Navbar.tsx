@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import {
-    Button,
     Container,
     Drawer,
     Menu,
@@ -12,7 +11,7 @@ import {
     Stack,
     CssBaseline,
 } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { navItems } from "./navbarOptions"; // Ensure you have the navItems defined
 
 const NavList = ({ ...props }) => {
@@ -39,10 +38,10 @@ const NavList = ({ ...props }) => {
     return (
         <Stack
             direction={{ xs: "column", sm: "row" }}
-            // gap={3}
-            // ml={{ xs: 3, sm: 0 }}
-            // mt={{ xs: 3, sm: 0 }}
-            // width={{ xs: "150px", sm: "initial" }}
+            gap={3}
+            ml={{ xs: 3, sm: 0 }}
+            mt={{ xs: 3, sm: 0 }}
+            width={{ xs: "150px", sm: "initial" }}
             {...props}
         >
             {/* Map the navItems without storing them in state */}
@@ -58,7 +57,7 @@ const NavList = ({ ...props }) => {
                     }
                     onMouseLeave={() => handleMenuClose(navItem.label)}
                 >
-                    <Link to={navItem.link} style={{ textDecoration: "none" }}>
+                    {/* <Link to={navItem.link} style={{ textDecoration: "none" }}>
                         <Button
                             aria-haspopup="true"
                             sx={{ color: "white" }}
@@ -72,7 +71,21 @@ const NavList = ({ ...props }) => {
                         >
                             {navItem.label}
                         </Button>
-                    </Link>
+                    </Link> */}
+                    <NavLink
+                        key={navItem.link}
+                        to={navItem.link}
+                        style={{
+                            fontSize: "1rem",
+                            textDecoration: "none",
+                            color: "white",
+                        }}
+                        className={({ isActive }) =>
+                            isActive ? "nav-link-active" : "nav-link"
+                        }
+                    >
+                        {navItem.label}
+                    </NavLink>
                     {navItem.children && (
                         <Menu
                             anchorEl={anchorEls.get(navItem.label)}

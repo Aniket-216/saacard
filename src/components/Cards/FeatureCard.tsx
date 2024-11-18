@@ -6,28 +6,25 @@ interface FeatureCardProps {
     icon: string;
     heading: string;
     subheading?: string;
+    cardStyleProps?: object;
+    cardContentStyleProps?: object;
 }
 
-const FeatureCard = ({ icon, heading, subheading }: FeatureCardProps) => {
+const FeatureCard = ({
+    icon,
+    heading,
+    subheading,
+    cardStyleProps,
+    cardContentStyleProps,
+}: FeatureCardProps) => {
     return (
-        <Card
-            sx={{
-                minWidth: 354,
-                minHeight: 276,
-                boxShadow: "0 0 40px 5px rgba(132, 132, 132, .2)",
-                borderRadius: "30px",
-                textAlign: "center",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <CardContent
-                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-            >
+        <Card sx={cardStyleProps}>
+            <CardContent sx={cardContentStyleProps}>
                 {icon}
-                <Typography>{heading}</Typography>
-                <Typography>{subheading}</Typography>
+                <Typography variant="h4">{heading}</Typography>
+                <Typography variant="subtitle1" component={"p"}>
+                    {subheading}
+                </Typography>
             </CardContent>
         </Card>
     );
