@@ -26,6 +26,7 @@ export default function TextField(theme: Theme) {
                         {
                             marginLeft: 12,
                         },
+                    borderRadius: 8,
                 },
             },
         },
@@ -77,6 +78,42 @@ export default function TextField(theme: Theme) {
                     backgroundColor: theme.palette.grey[200],
                     "&:hover": {
                         backgroundColor: theme.palette.common.white,
+                        borderColor: theme.palette.error.main,
+                    },
+                    "&.Mui-focused": {
+                        borderColor: theme.palette.error.main,
+                    },
+                },
+            },
+        },
+
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    // borderRadius: 8,
+                    "&.MuiOutlinedInput-root": {
+                        borderRadius: 30,
+                    },
+                    overflow: "hidden",
+                    border: `2px solid ${theme.palette.grey[300]}`,
+                    backgroundColor: theme.palette.common.white,
+                    "&:hover:not(.Mui-disabled, .Mui-error)": {
+                        border: "2px solid var(--TextField-brandBorderHoverColor)",
+                    },
+                    "&.Mui-focused": {
+                        border: "2px solid var(--TextField-brandBorderFocusedColor)",
+                    },
+                    "& .MuiOutlinedInput-input": {
+                        paddingLeft: 16,
+                        paddingRight: 16,
+                    },
+                    "&.Mui-disabled": {
+                        border: `2px solid ${theme.palette.grey[500]}`,
+                    },
+                },
+                error: {
+                    borderColor: theme.palette.error.main,
+                    "&:hover": {
                         borderColor: theme.palette.error.main,
                     },
                     "&.Mui-focused": {

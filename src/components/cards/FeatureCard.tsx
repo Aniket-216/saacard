@@ -1,6 +1,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { TypographyProps } from "@mui/material/Typography";
 
 interface FeatureCardProps {
     icon: string;
@@ -8,6 +9,7 @@ interface FeatureCardProps {
     subheading?: string;
     cardStyleProps?: object;
     cardContentStyleProps?: object;
+    headVariant?: TypographyProps["variant"];
 }
 
 const FeatureCard = ({
@@ -16,12 +18,13 @@ const FeatureCard = ({
     subheading,
     cardStyleProps,
     cardContentStyleProps,
+    headVariant,
 }: FeatureCardProps) => {
     return (
         <Card sx={cardStyleProps}>
             <CardContent sx={cardContentStyleProps}>
                 {icon}
-                <Typography variant="h5">{heading}</Typography>
+                <Typography variant={headVariant || "h5"}>{heading}</Typography>
                 <Typography variant="subtitle1" component={"p"}>
                     {subheading}
                 </Typography>

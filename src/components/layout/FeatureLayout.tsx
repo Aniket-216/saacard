@@ -5,7 +5,7 @@ import { FeatureTools } from "../../constant/featureOptions";
 interface FeatureLayoutProps {
     children: React.ReactNode;
     heading: string;
-    subheading: string;
+    subheading: string | string[]; // Accept both single string or array of strings
     OPTIONS: FeatureTools[];
 }
 
@@ -33,9 +33,20 @@ const FeatureLayout = ({
                             >
                                 {heading}
                             </Typography>
-                            <Typography component={"p"}>
-                                {subheading}
-                            </Typography>
+                            {/* Handle single or multiple paragraphs */}
+                            {Array.isArray(subheading) ? (
+                                <Stack spacing={2}>
+                                    {subheading.map((paragraph, index) => (
+                                        <Typography key={index} component={"p"}>
+                                            {paragraph}
+                                        </Typography>
+                                    ))}
+                                </Stack>
+                            ) : (
+                                <Typography component={"p"}>
+                                    {subheading}
+                                </Typography>
+                            )}
                         </Stack>
                         <Box>
                             {OPTIONS.map((option, index) => (
