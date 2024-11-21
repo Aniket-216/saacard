@@ -1,9 +1,9 @@
-export interface FeatureTools {
+export interface OptionProps {
     title: string;
     caption: string;
 }
 
-export const featureTools: FeatureTools[] = [
+export const featureTools: OptionProps[] = [
     {
         title: "Instant Activation",
         caption:
@@ -21,12 +21,20 @@ export const featureTools: FeatureTools[] = [
     },
 ];
 
-export interface ShortGstServiceProps {
-    title: string;
-    caption: string;
-}
+export const PeerlessNetworkingOption: OptionProps[] = [
+    {
+        title: "Instant Activation",
+        caption:
+            "Activate your account and start transacting in just 2 minutes. Our fully online onboarding process requires minimal documentation.",
+    },
+    {
+        title: "Effortless Integration",
+        caption:
+            "Integrate smoothly with our plugins for all major platforms and programming languages. Go live with [Website Name] in under an hour.",
+    },
+];
 
-export const shortGstService: ShortGstServiceProps[] = [
+export const shortGstService: OptionProps[] = [
     {
         title: "GSTR-In (Goods and Services Tax Return - Input):",
         caption:

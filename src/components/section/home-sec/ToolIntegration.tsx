@@ -32,7 +32,7 @@ const ToolIntegration = () => {
                                 payments, ensuring secure and swift fund
                                 transfers with unwavering dependability
                             </Typography>
-                            <Button>Read More</Button>
+                            <Button variant="contained">Read More</Button>
                         </Box>
                     </Grid>
                 </Grid>

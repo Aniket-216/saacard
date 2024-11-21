@@ -76,9 +76,9 @@ const typography: Typography = {
     fontWeightBold: 600,
     h1: {
         fontWeight: 700,
-        fontSize: pxToRem(70),
+        fontSize: pxToRem(60),
         lineHeight: pxToRem(97.52),
-        ...responsiveFontSizes({ sm: 40, md: 50, lg: 60, xl: 70, xxl: 80 }),
+        ...responsiveFontSizes({ sm: 40, md: 45, lg: 55, xl: 60, xxl: 80 }),
     },
     h2: {
         fontWeight: 600,
