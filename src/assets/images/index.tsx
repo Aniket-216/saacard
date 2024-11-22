@@ -3,6 +3,11 @@ import Mobile from "./mobile.png";
 import CardThree from "./card-03.png";
 import HandMobile from "./mobile-08.png";
 import MobileSix from "./mobile-06.png";
+import Dashboard from "./dashboard.png";
+import BigMobile from "./big-mobile.png";
+import MobileFive from "./mobile-05.png";
+
+import Integration from "./integrations-01.webp";
 
 import AnnualIncrease from "./annual-increase.svg";
 import Cashback from "./cashback.svg";
@@ -23,4 +28,8 @@ export {
     CardThree,
     HandMobile,
     MobileSix,
+    Dashboard,
+    BigMobile,
+    MobileFive,
+    Integration,
 };

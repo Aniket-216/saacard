@@ -6,26 +6,35 @@ import {
     Typography,
     useTheme,
 } from "@mui/material";
+import BgColorLayout from "../../layout/BgColorLayout";
 
 const PayrollShort = () => {
     const theme = useTheme();
     return (
-        <Box
-            sx={{
-                bgcolor: "#6f00eb",
-                height: "437px",
-                display: "flex",
-                alignItems: "center",
-            }}
-        >
-            <Container maxWidth="lg">
-                <Stack textAlign={"center"} alignItems={"center"} spacing={2}>
-                    <Typography variant="h3" color={theme.palette.common.white}>
-                        Powerhouse Of Payroll With Compliance Automation
-                    </Typography>
-                    <Button variant="contained">Know More</Button>
-                </Stack>
-            </Container>
+        <Box sx={{ my: 10 }}>
+            <BgColorLayout
+                height="auto"
+                bgcolor="#6f00eb"
+                styleProps={{
+                    py: 10,
+                }}
+            >
+                <Container maxWidth="lg">
+                    <Stack
+                        textAlign={"center"}
+                        alignItems={"center"}
+                        spacing={2}
+                    >
+                        <Typography
+                            variant="h3"
+                            color={theme.palette.common.white}
+                        >
+                            Powerhouse Of Payroll With Compliance Automation
+                        </Typography>
+                        <Button variant="contained">Know More</Button>
+                    </Stack>
+                </Container>
+            </BgColorLayout>
         </Box>
     );
 };

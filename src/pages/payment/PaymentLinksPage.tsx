@@ -1,4 +1,5 @@
 import AuthenticationMeasures from "../../components/section/payment-sec/payment-link/AuthenticationMeasures";
+import DiverseIndustries from "../../components/section/payment-sec/payment-link/DiverseIndustries";
 import EnergizingPayments from "../../components/section/payment-sec/payment-link/EnergizingPayments";
 import LinkingProsperity from "../../components/section/payment-sec/payment-link/LinkingProsperity";
 import LinkProfits from "../../components/section/payment-sec/payment-link/LinkProfits";
@@ -11,6 +12,7 @@ const PaymentLinks = () => {
             <LinkingProsperity />
             <LinkProfits />
             <AuthenticationMeasures />
+            <DiverseIndustries />
             <EnergizingPayments />
             <SmartWayLinks />
             <SwiftPayments />

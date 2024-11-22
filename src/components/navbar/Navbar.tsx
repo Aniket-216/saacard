@@ -189,7 +189,9 @@ const Navbar: React.FC = () => {
                             width="100%"
                         >
                             {/* App Name / Logo */}
-                            <Typography variant="h6">SASCARD</Typography>
+                            <Typography variant="h6" color="white">
+                                SASCARD
+                            </Typography>
                             {/* Navigation Links */}
                             <Nav />
                         </Stack>

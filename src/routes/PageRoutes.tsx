@@ -4,13 +4,15 @@ import AboutPage from "../pages/AboutPage";
 import App from "../App";
 import ContactUsPage from "../pages/ContactUsPage";
 import FaqPage from "../pages/FaqPage";
-import CollectPayment from "../pages/payment/CollectPayment";
-import PaymentGateway from "../pages/payment/PaymentGateway";
-import PaymentLinks from "../pages/payment/PaymentLinks";
-import UpiAutopay from "../pages/payment/UpiAutopay";
-import Invoices from "../pages/payment/Invoices";
-import Cards from "../pages/payment/Cards";
+import CollectPaymentPage from "../pages/payment/CollectPaymentPage";
+import PaymentGatewayPage from "../pages/payment/PaymentGatewayPage";
+import PaymentLinksPage from "../pages/payment/PaymentLinksPage";
+import UpiAutopayPage from "../pages/payment/UpiAutopayPage";
+import InvoicesPage from "../pages/payment/InvoicesPage";
+import CardsPage from "../pages/payment/CardsPage";
 import PricingPage from "../pages/PricingPage";
+import GstSolutionPage from "../pages/resources/GstSolutionPage";
+import AccountingPage from "../pages/resources/AccountingPage";
 
 export const PageRoutes = createBrowserRouter([
     {
@@ -35,27 +37,35 @@ export const PageRoutes = createBrowserRouter([
             },
             {
                 path: "payments/collect-payments",
-                element: <CollectPayment />,
+                element: <CollectPaymentPage />,
             },
             {
                 path: "payments/payments-gateway",
-                element: <PaymentGateway />,
+                element: <PaymentGatewayPage />,
             },
             {
                 path: "payments/payments-links",
-                element: <PaymentLinks />,
+                element: <PaymentLinksPage />,
             },
             {
                 path: "payments/upi-autopay",
-                element: <UpiAutopay />,
+                element: <UpiAutopayPage />,
             },
             {
                 path: "payments/invoices",
-                element: <Invoices />,
+                element: <InvoicesPage />,
             },
             {
                 path: "payments/cards",
-                element: <Cards />,
+                element: <CardsPage />,
+            },
+            {
+                path: "resources/gst-solutions",
+                element: <GstSolutionPage />,
+            },
+            {
+                path: "resources/accounting",
+                element: <AccountingPage />,
             },
             {
                 path: "pricing",
