@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
+import { BigMobile } from "../../../../assets/images";
 
 const PioneeringMerchants = () => {
     const theme = useTheme();
@@ -12,7 +13,9 @@ const PioneeringMerchants = () => {
             >
                 <Container maxWidth="xl">
                     <Grid container>
-                        <Grid size={{ md: 6 }}>Image</Grid>
+                        <Grid size={{ md: 6 }}>
+                            <img src={BigMobile} alt="big-mobile" />
+                        </Grid>
                         <Grid size={{ md: 6 }}>
                             <Stack spacing={2}>
                                 <Typography

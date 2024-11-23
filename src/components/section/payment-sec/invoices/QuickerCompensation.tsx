@@ -1,5 +1,6 @@
 import { Box, Container } from "@mui/material";
 import FeatureLayout from "../../../layout/FeatureLayout";
+import { Mobile } from "../../../../assets/images";
 
 const compensationOptions = [
     {
@@ -26,7 +27,7 @@ const QuickerCompensation = () => {
                     OPTIONS={compensationOptions}
                     reverse={true}
                 >
-                    Image
+                    <img src={Mobile} alt="mobile" />
                 </FeatureLayout>
             </Container>
         </Box>

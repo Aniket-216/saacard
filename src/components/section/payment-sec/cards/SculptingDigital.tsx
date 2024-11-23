@@ -1,9 +1,9 @@
 import Grid from "@mui/material/Grid2";
-import BgColorLayout from "../../layout/BgColorLayout";
-import { Box, Button, Container, Typography } from "@mui/material";
-import { CardThree } from "../../../assets/images";
+import BgColorLayout from "../../../layout/BgColorLayout";
+import { Box, Container, Typography } from "@mui/material";
+import { CardThree } from "../../../../assets/images";
 
-const ToolIntegration = () => {
+const SculptingDigital = () => {
     return (
         <BgColorLayout height="auto" styleProps={{ py: 10 }}>
             <Container maxWidth="xl">
@@ -25,14 +25,19 @@ const ToolIntegration = () => {
                             }}
                         >
                             <Typography variant="h3">
-                                Access Everything You Need With One Onboard
+                                Sculpting a Digital Transaction Revolution with
+                                Finesse
                             </Typography>
                             <Typography component={"p"}>
-                                Take control of when and how your users receive
-                                payments, ensuring secure and swift fund
-                                transfers with unwavering dependability
+                                In a world awash with complexities, our cards
+                                emerge as the catalysts of simplicity. They
+                                liberate businesses from the burdens of secure
+                                online payments, empowering them to nurture
+                                growth unhindered. Within this realm of ease,
+                                every payment method harmonizes with your
+                                enterprise&apos;s unique requirements, fostering
+                                an ecosystem of financial fluidity.
                             </Typography>
-                            <Button variant="contained">Read More</Button>
                         </Box>
                     </Grid>
                 </Grid>
@@ -41,4 +46,4 @@ const ToolIntegration = () => {
     );
 };
 
-export default ToolIntegration;
+export default SculptingDigital;

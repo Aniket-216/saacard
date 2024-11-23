@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 import FeatureLayout from "../../../layout/FeatureLayout";
 import { PeerlessNetworkingOption } from "../../../../constant/featureOptions";
+import { Card } from "../../../../assets/images";
 
 const PeerlessNetworking = () => {
     return (
@@ -12,7 +13,16 @@ const PeerlessNetworking = () => {
                 }
                 OPTIONS={PeerlessNetworkingOption}
             >
-                Image
+                <img
+                    src={Card}
+                    style={{
+                        rotate: "-90deg",
+                        height: 230,
+                        position: "absolute",
+                        top: 50,
+                    }}
+                    alt="card"
+                />
             </FeatureLayout>
         </Container>
     );

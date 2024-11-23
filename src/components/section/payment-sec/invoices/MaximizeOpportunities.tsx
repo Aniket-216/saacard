@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
+import { MobileFive } from "../../../../assets/images";
 
 const MaximizeOpportunities = () => {
     const theme = useTheme();
@@ -15,7 +16,9 @@ const MaximizeOpportunities = () => {
             >
                 <Container maxWidth="xl">
                     <Grid container spacing={2}>
-                        <Grid size={{ md: 6 }}>Image</Grid>
+                        <Grid size={{ md: 6 }}>
+                            <img src={MobileFive} alt="mobile-five" />
+                        </Grid>
                         <Grid size={{ md: 6 }}>
                             <Stack spacing={4}>
                                 <Typography
