@@ -13,6 +13,11 @@ import CardsPage from "../pages/payment/CardsPage";
 import PricingPage from "../pages/PricingPage";
 import GstSolutionPage from "../pages/resources/GstSolutionPage";
 import AccountingPage from "../pages/resources/AccountingPage";
+import PayoutPage from "../pages/banking/PayoutPage";
+import VendorPaymentsPage from "../pages/banking/VendorPaymentsPage";
+import CurrentAccountPage from "../pages/banking/CurrentAccountPage";
+import CashManagementPage from "../pages/banking/CashManagementPage";
+import PayrollPage from "../pages/PayrollPage";
 
 export const PageRoutes = createBrowserRouter([
     {
@@ -58,6 +63,26 @@ export const PageRoutes = createBrowserRouter([
             {
                 path: "payments/cards",
                 element: <CardsPage />,
+            },
+            {
+                path: "banking/payouts",
+                element: <PayoutPage />,
+            },
+            {
+                path: "banking/vendor-payments",
+                element: <VendorPaymentsPage />,
+            },
+            {
+                path: "banking/current-accounts",
+                element: <CurrentAccountPage />,
+            },
+            {
+                path: "banking/cash-management",
+                element: <CashManagementPage />,
+            },
+            {
+                path: "payroll",
+                element: <PayrollPage />,
             },
             {
                 path: "resources/gst-solutions",
