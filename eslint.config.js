@@ -14,6 +14,10 @@ export default [
     eslintPluginPrettier,
     {
         rules: {
+            "linebreak-style": [
+                "error",
+                process.platform === "win32" ? "windows" : "unix",
+            ],
             "react/react-in-jsx-scope": "off",
             "no-unused-vars": "warn",
         },
