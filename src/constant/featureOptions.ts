@@ -113,3 +113,21 @@ export const creditOfferingsOption: OptionProps[] = [
             "Benefit from tailor-made credit limits designed to perfectly match your unique financial requirements and preferences.",
     },
 ];
+
+export const economicEmpowermentOption: OptionProps[] = [
+    {
+        title: "Seamless Transaction Management",
+        caption:
+            "You can access your finances instantly with our current accounts. Keep track of your spending, check your balance, and start payments to ensure you're always in control.",
+    },
+    {
+        title: "Increased financial adaptability",
+        caption:
+            "You can unlock financial flexibility with our current accounts. To make managing your money easier, use overdraft capabilities, recurring payments, and rapid fund transfers.",
+    },
+    {
+        title: "Business Process Improvement",
+        caption:
+            "Entrepreneurial current accounts make business easier.Improve payroll administration, cash flow, and other aspects of your account by integrating it with payment processors.",
+    },
+];

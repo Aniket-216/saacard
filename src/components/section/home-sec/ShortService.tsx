@@ -9,6 +9,9 @@ const ShortService = () => {
                 "Maximize Financial Optimization And Streamline Processes With Our Infrastructure. Ideal For Platforms And Marketplaces Aiming To Accelerate User Payouts In Their Preferred Currencies."
             }
             CARDOPTION={shortServiceCard}
+            gridProps={{
+                heading: { md: 12, lg: 6 }, // Custom size for the heading
+            }}
         />
     );
 };

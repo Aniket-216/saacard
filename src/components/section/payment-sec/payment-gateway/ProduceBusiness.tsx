@@ -1,4 +1,5 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
 import DashedCurvedArrow from "../../../shapes/DashedCurvedArrow";
 
@@ -31,17 +32,21 @@ const paymentFlowOption: PaymentFlowOptionProp[] = [
 
 const PaymentFlow = ({ id, title, subtitle }: PaymentFlowOptionProp) => {
     return (
-        <Box sx={{ position: "relative", mb: 4 }}>
-            <Stack
-                direction={{ xs: "column", md: "row" }}
-                spacing={4}
-                // alignItems="center"
-                // justifyContent="flex-start"
+        <Grid container>
+            <Grid
+                size={{ md: id === 2 ? 8 : 12 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
             >
-                {/* Title and Subtitle */}
                 <Stack
                     spacing={1}
-                    sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}
+                    sx={{
+                        width: "30%",
+                        flex: 1,
+                        // textAlign: { xs: "center", md: "left" },
+                    }}
                 >
                     <Typography variant="h5"> {`0${id}.`}</Typography>
                     <Typography variant="h6" fontWeight="bold">
@@ -51,10 +56,13 @@ const PaymentFlow = ({ id, title, subtitle }: PaymentFlowOptionProp) => {
                         {subtitle}
                     </Typography>
                 </Stack>
-            </Stack>
-            {/* Dashed Arrow */}
-            {id < paymentFlowOption.length && <DashedCurvedArrow />}
-        </Box>
+            </Grid>
+            <Grid size={{ md: 4 }}>
+                <Stack alignItems={"center"}>
+                    {id < paymentFlowOption.length && <DashedCurvedArrow />}
+                </Stack>
+            </Grid>
+        </Grid>
     );
 };
 

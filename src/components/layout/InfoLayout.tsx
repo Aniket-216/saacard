@@ -7,13 +7,22 @@ interface InfoLayoutProps {
     heading: string;
     subheading: string;
     CARDOPTION: ShortServiceCardProps[];
+    gridProps?: {
+        heading?: object; // For the heading section grid
+        cards?: object; // For the card grids
+    };
 }
 
-const InfoLayout = ({ heading, subheading, CARDOPTION }: InfoLayoutProps) => {
+const InfoLayout = ({
+    heading,
+    subheading,
+    CARDOPTION,
+    gridProps,
+}: InfoLayoutProps) => {
     return (
         <Container maxWidth="xl" sx={{ my: 15 }}>
             <Grid container spacing={2}>
-                <Grid size={{ md: 12, lg: 6 }}>
+                <Grid size={{ ...(gridProps?.heading || { md: 12, lg: 6 }) }}>
                     <Stack>
                         <Typography variant="h3">{heading}</Typography>
                         <Typography variant="caption">{subheading}</Typography>
@@ -26,7 +35,12 @@ const InfoLayout = ({ heading, subheading, CARDOPTION }: InfoLayoutProps) => {
                 {CARDOPTION.map((card, index) => (
                     <Grid
                         key={index}
-                        size={{ md: 12, lg: index === 2 ? 6 : 3 }}
+                        size={{
+                            ...(gridProps?.cards || {
+                                md: 12,
+                                lg: index === 2 ? 6 : 3,
+                            }),
+                        }}
                         spacing={2}
                     >
                         <FeatureCard

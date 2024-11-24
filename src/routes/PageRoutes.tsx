@@ -18,6 +18,7 @@ import VendorPaymentsPage from "../pages/banking/VendorPaymentsPage";
 import CurrentAccountPage from "../pages/banking/CurrentAccountPage";
 import CashManagementPage from "../pages/banking/CashManagementPage";
 import PayrollPage from "../pages/PayrollPage";
+import Company from "../pages/Company";
 
 export const PageRoutes = createBrowserRouter([
     {
@@ -29,16 +30,22 @@ export const PageRoutes = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: "company/about",
-                element: <AboutPage />,
-            },
-            {
-                path: "company/faq",
-                element: <FaqPage />,
-            },
-            {
-                path: "company/contact",
-                element: <ContactUsPage />,
+                path: "company",
+                element: <Company />,
+                children: [
+                    {
+                        path: "about",
+                        element: <AboutPage />,
+                    },
+                    {
+                        path: "faq",
+                        element: <FaqPage />,
+                    },
+                    {
+                        path: "contact",
+                        element: <ContactUsPage />,
+                    },
+                ],
             },
             {
                 path: "payments/collect-payments",

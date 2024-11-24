@@ -1,7 +1,13 @@
-import React from "react";
+import FinancialOdyssey from "../components/section/payroll-sec/FinancialOdyssey";
+import TurbochargedGrowth from "../components/section/payroll-sec/TurbochargedGrowth";
 
 const PayrollPage = () => {
-    return <div>PayrollPage</div>;
+    return (
+        <>
+            <FinancialOdyssey />
+            <TurbochargedGrowth />
+        </>
+    );
 };
 
 export default PayrollPage;
