@@ -1,7 +1,6 @@
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import {
     Container,
     Drawer,
@@ -13,6 +12,7 @@ import {
 } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { navItems } from "./navbarOptions"; // Ensure you have the navItems defined
+import { Sascard } from "../../assets/images";
 
 const NavList = ({ ...props }) => {
     const [anchorEls, setAnchorEls] = useState<Map<string, HTMLElement | null>>(
@@ -189,9 +189,7 @@ const Navbar: React.FC = () => {
                             width="100%"
                         >
                             {/* App Name / Logo */}
-                            <Typography variant="h6" color="white">
-                                SASCARD
-                            </Typography>
+                            <img src={Sascard} alt="logo" />
                             {/* Navigation Links */}
                             <Nav />
                         </Stack>

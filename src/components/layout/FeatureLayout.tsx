@@ -7,6 +7,7 @@ interface FeatureLayoutProps {
     heading: string;
     subheading: string | string[]; // Accept both single string or array of strings
     OPTIONS?: OptionProps[];
+    childrenStyleProps?: object;
     reverse?: boolean;
 }
 
@@ -15,18 +16,22 @@ const FeatureLayout = ({
     heading,
     subheading,
     OPTIONS,
+    childrenStyleProps,
     reverse = false,
 }: FeatureLayoutProps) => {
     const theme = useTheme();
     return (
         <Container maxWidth={"xl"}>
             <Grid container spacing={7}>
-                <Grid size={5} order={reverse ? 2 : 1}>
-                    <Stack sx={{ position: "relative" }} alignItems={"center"}>
+                <Grid size={7} order={reverse ? 2 : 1}>
+                    <Stack
+                        sx={{ position: "relative", ...childrenStyleProps }}
+                        alignItems={"center"}
+                    >
                         {children}
                     </Stack>
                 </Grid>
-                <Grid size={7} order={reverse ? 1 : 2}>
+                <Grid size={5} order={reverse ? 1 : 2}>
                     <Stack spacing={4}>
                         <Stack spacing={2}>
                             <Typography

@@ -6,6 +6,7 @@ import MobileSix from "./mobile-06.png";
 import Dashboard from "./dashboard.png";
 import BigMobile from "./big-mobile.png";
 import MobileFive from "./mobile-05.png";
+import MobileSeven from "./mobile-07.png";
 
 import Integration from "./integrations-01.webp";
 
@@ -15,6 +16,10 @@ import Check from "./check.svg";
 import Dollar from "./dollar.svg";
 import Lock from "./lock.svg";
 import Percent from "./percent.svg";
+import Sascard from "./sascard-light.svg";
+import CashFlow from "./cashflow.svg";
+import Transaction from "./transaction.svg";
+import PaymentReceived from "./payment-recive.svg";
 
 export {
     Card,
@@ -32,4 +37,9 @@ export {
     BigMobile,
     MobileFive,
     Integration,
+    Sascard,
+    MobileSeven,
+    CashFlow,
+    Transaction,
+    PaymentReceived,
 };

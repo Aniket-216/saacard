@@ -19,6 +19,8 @@ import CurrentAccountPage from "../pages/banking/CurrentAccountPage";
 import CashManagementPage from "../pages/banking/CashManagementPage";
 import PayrollPage from "../pages/PayrollPage";
 import Company from "../pages/Company";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
 
 export const PageRoutes = createBrowserRouter([
     {
@@ -29,6 +31,8 @@ export const PageRoutes = createBrowserRouter([
                 index: true,
                 element: <HomePage />,
             },
+            { path: "sign-in", element: <SignIn /> },
+            { path: "sign-up", element: <SignUp /> },
             {
                 path: "company",
                 element: <Company />,

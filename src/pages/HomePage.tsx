@@ -2,7 +2,7 @@ import HomeBanner from "../components/section/home-sec/HomeBanner";
 import AppIntegrations from "../components/section/home-sec/AppIntegrations";
 import Feature from "../components/section/home-sec/Feature";
 import WhyUs from "../components/section/home-sec/WhyUs";
-// import SimpleSteps from "../components/section/home-sec/SimpleSteps";
+import SimpleSteps from "../components/section/home-sec/SimpleSteps";
 import PayrollShort from "../components/section/home-sec/PayrollShort";
 import ShortService from "../components/section/home-sec/ShortService";
 import ToolIntegration from "../components/section/home-sec/ToolIntegration";
@@ -15,7 +15,7 @@ const HomePage = () => {
             <AppIntegrations />
             <Feature />
             <WhyUs />
-            {/* <SimpleSteps /> */}
+            <SimpleSteps />
             <PayrollShort />
             <ShortService />
             <ToolIntegration />

@@ -1,4 +1,6 @@
 import FinancialOdyssey from "../components/section/payroll-sec/FinancialOdyssey";
+import GlobalPayments from "../components/section/payroll-sec/GlobalPayments";
+import SwiftDelivery from "../components/section/payroll-sec/SwiftDelivery";
 import TurbochargedGrowth from "../components/section/payroll-sec/TurbochargedGrowth";
 
 const PayrollPage = () => {
@@ -6,6 +8,8 @@ const PayrollPage = () => {
         <>
             <FinancialOdyssey />
             <TurbochargedGrowth />
+            <GlobalPayments />
+            <SwiftDelivery />
         </>
     );
 };
