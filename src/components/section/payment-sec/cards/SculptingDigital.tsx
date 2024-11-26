@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
 import { Box, Container, Typography } from "@mui/material";
-import { CardThree } from "../../../../assets/images";
+import { CardThree } from "../../../../assets";
 
 const SculptingDigital = () => {
     return (

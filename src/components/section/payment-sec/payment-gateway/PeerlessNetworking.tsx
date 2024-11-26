@@ -1,30 +1,62 @@
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import FeatureLayout from "../../../layout/FeatureLayout";
 import { PeerlessNetworkingOption } from "../../../../constant/featureOptions";
-import { Card } from "../../../../assets/images";
+import {
+    Card,
+    CashFlow,
+    PaymentReceived,
+    Transaction,
+} from "../../../../assets";
 
 const PeerlessNetworking = () => {
     return (
-        <Container maxWidth="xl">
-            <FeatureLayout
-                heading="Peerless Networking Opportunities Open to All"
-                subheading={
-                    "Make payment integration into [website Name] a breeze with our comprehensive SDKs, RESTful APIs, and versatile plugins, supporting all major platforms and programming languages for a mind-blowing experience"
-                }
-                OPTIONS={PeerlessNetworkingOption}
-            >
-                <img
-                    src={Card}
-                    style={{
-                        rotate: "-90deg",
-                        height: 230,
-                        position: "absolute",
-                        top: 50,
+        <Box sx={{ my: 10 }}>
+            <Container maxWidth="xl">
+                <FeatureLayout
+                    heading="Peerless Networking Opportunities Open to All"
+                    subheading={
+                        "Make payment integration into [website Name] a breeze with our comprehensive SDKs, RESTful APIs, and versatile plugins, supporting all major platforms and programming languages for a mind-blowing experience"
+                    }
+                    OPTIONS={PeerlessNetworkingOption}
+                    childrenStyleProps={{
+                        height: "100%",
+                        justifyContent: "center",
                     }}
-                    alt="card"
-                />
-            </FeatureLayout>
-        </Container>
+                >
+                    <img
+                        src={Card}
+                        style={{
+                            rotate: "-90deg",
+                        }}
+                    />
+                    <img
+                        src={CashFlow}
+                        style={{
+                            position: "absolute",
+                            top: "5px",
+                            left: "130px",
+                        }}
+                    />
+                    <img
+                        src={Transaction}
+                        style={{
+                            position: "absolute",
+                            bottom: "150px",
+                            right: "-25px",
+                            height: "250px",
+                        }}
+                    />
+                    <img
+                        src={PaymentReceived}
+                        style={{
+                            position: "absolute",
+                            bottom: "90px",
+                            left: "110px",
+                        }}
+                    />
+                </FeatureLayout>
+            </Container>
+        </Box>
     );
 };
 

@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "./BgColorLayout";
-import { MobileSeven } from "../../assets/images";
+import { MobileSeven } from "../../assets";
 
 interface SignInLayoutProps {
     heading: string;

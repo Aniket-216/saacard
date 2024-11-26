@@ -1,12 +1,17 @@
 import { Container, Stack, Typography, useTheme } from "@mui/material";
 import BgColorLayout from "../../../layout/BgColorLayout";
 import CountUp from "react-countup";
+import { UpiVideo } from "../../../../assets";
 
 const AcceleratePayment = () => {
     const theme = useTheme();
     return (
-        <BgColorLayout bgImage styleProps={{ marginBottom: 10 }}>
-            <Container maxWidth="xl">
+        <BgColorLayout
+            bgImage
+            height="auto"
+            styleProps={{ marginBottom: 10, paddingTop: 15, paddingBottom: 20 }}
+        >
+            <Container maxWidth="lg">
                 <Stack spacing={4}>
                     <Stack spacing={1}>
                         <Typography
@@ -58,6 +63,21 @@ const AcceleratePayment = () => {
                                 UPI users leverage auto-debit.
                             </Typography>
                         </Stack>
+                    </Stack>
+                    <Stack
+                        sx={{
+                            height: "auto",
+                        }}
+                    >
+                        <video
+                            autoPlay
+                            loop
+                            muted
+                            src={UpiVideo}
+                            style={{
+                                borderRadius: 40,
+                            }}
+                        />
                     </Stack>
                 </Stack>
             </Container>

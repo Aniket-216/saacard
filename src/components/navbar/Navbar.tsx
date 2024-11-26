@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { navItems } from "./navbarOptions"; // Ensure you have the navItems defined
-import { Sascard } from "../../assets/images";
+import { Sascard } from "../../assets";
 
 const NavList = ({ ...props }) => {
     const [anchorEls, setAnchorEls] = useState<Map<string, HTMLElement | null>>(

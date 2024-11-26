@@ -32,37 +32,45 @@ const paymentFlowOption: PaymentFlowOptionProp[] = [
 
 const PaymentFlow = ({ id, title, subtitle }: PaymentFlowOptionProp) => {
     return (
-        <Grid container>
+        <>
             <Grid
-                size={{ md: id === 2 ? 8 : 12 }}
+                size={{ md: 4 }}
                 sx={{
                     display: "flex",
                     flexDirection: "column",
                 }}
             >
-                <Stack
-                    spacing={1}
-                    sx={{
-                        width: "30%",
-                        flex: 1,
-                        // textAlign: { xs: "center", md: "left" },
-                    }}
-                >
-                    <Typography variant="h5"> {`0${id}.`}</Typography>
+                <Stack spacing={1}>
+                    <Typography variant="h5" color="#6f00eb">
+                        {`0${id}.`}
+                    </Typography>
                     <Typography variant="h6" fontWeight="bold">
                         {title}
                     </Typography>
-                    <Typography variant="body1" color="textSecondary">
-                        {subtitle}
-                    </Typography>
+                    <Typography variant="body1">{subtitle}</Typography>
                 </Stack>
             </Grid>
+            <Grid
+                size={{ md: 4 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
+            ></Grid>
+            <Grid
+                size={{ md: 4 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
+            ></Grid>
+
             <Grid size={{ md: 4 }}>
                 <Stack alignItems={"center"}>
                     {id < paymentFlowOption.length && <DashedCurvedArrow />}
                 </Stack>
             </Grid>
-        </Grid>
+        </>
     );
 };
 
@@ -81,9 +89,11 @@ const ProduceBusiness = () => {
 
                         {/* Steps */}
                         <Stack sx={{ mt: 4 }}>
-                            {paymentFlowOption.map((option) => (
-                                <PaymentFlow key={option.id} {...option} />
-                            ))}
+                            <Grid container spacing={3}>
+                                {paymentFlowOption.map((option) => (
+                                    <PaymentFlow key={option.id} {...option} />
+                                ))}
+                            </Grid>
                         </Stack>
                     </Stack>
                 </Container>

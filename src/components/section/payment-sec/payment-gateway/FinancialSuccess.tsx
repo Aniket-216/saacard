@@ -1,16 +1,80 @@
 import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FeatureCard from "../../../cards/FeatureCard";
+import {
+    Access,
+    Api,
+    BankBold,
+    BudgetTool,
+    FinanceSuiteBold,
+    PortfolioTracking,
+    SecurityBold,
+} from "../../../../assets";
+import { CustomerSupport } from "../../../../assets/svg/CustomerSupport";
 
 const features = [
-    "Affordable Access",
-    "24/7 Customer Support",
-    "Budgeting Tools",
-    "Comprehensive Banking",
-    "Enhanced Security",
-    "Portfolio Tracking",
-    "Financial Suite",
-    "API Integration",
+    {
+        icon: (
+            <Access
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "Affordable Access",
+    },
+    {
+        icon: (
+            <CustomerSupport
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "24/7 Customer Support",
+    },
+    {
+        icon: (
+            <BudgetTool
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "Budgeting Tools",
+    },
+    {
+        icon: (
+            <BankBold
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "Comprehensive Banking",
+    },
+    {
+        icon: (
+            <SecurityBold
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "Enhanced Security",
+    },
+    {
+        icon: (
+            <PortfolioTracking
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "Portfolio Tracking",
+    },
+    {
+        icon: (
+            <FinanceSuiteBold
+                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
+            />
+        ),
+        title: "Financial Suite",
+    },
+    {
+        icon: (
+            <Api style={{ color: "#6f00eb", width: "40px", height: "40px" }} />
+        ),
+        title: "API Integration",
+    },
 ];
 
 const FinancialSuccess = () => {
@@ -38,8 +102,8 @@ const FinancialSuccess = () => {
                             {features.map((feature, index) => (
                                 <Grid key={index} size={{ md: 3 }}>
                                     <FeatureCard
-                                        icon="icon"
-                                        heading={feature}
+                                        icon={feature.icon}
+                                        heading={feature.title}
                                         headVariant="h6"
                                         cardStyleProps={{
                                             backgroundColor: "#e5e2ff",

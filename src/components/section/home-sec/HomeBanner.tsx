@@ -16,7 +16,7 @@ import {
     Lock,
     Mobile,
     Percent,
-} from "../../../assets/images";
+} from "../../../assets";
 import { useEffect, useState } from "react";
 
 const ParallaxImage = styled("img")(() => ({
@@ -89,7 +89,7 @@ const HomeBanner = () => {
                                 top: "8%",
                                 left: "-32%",
                                 borderRadius: "20%",
-                                transform: calculateTransform(0),
+                                transform: calculateTransform(-10),
                             }}
                         />
                         <ParallaxImage
@@ -108,7 +108,7 @@ const HomeBanner = () => {
                             style={{
                                 bottom: "34px",
                                 left: "-64%",
-                                transform: calculateTransform(15),
+                                transform: calculateTransform(-15),
                             }}
                         />
                         <ParallaxImage

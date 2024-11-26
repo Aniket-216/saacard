@@ -1,38 +1,61 @@
 import { Box, Container, Paper, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+import { Cards, Cashless, CashlessMachine } from "../../../../assets";
 
 interface InvoiceCardProps {
+    image: string;
     title: string;
     subtitle: string;
 }
 
 const invoiceOption: InvoiceCardProps[] = [
     {
+        image: Cards,
         title: "Efficient Invoicing Solutions",
         subtitle:
             "Streamline billing processes, reducing administrative burden.",
     },
     {
+        image: Cashless,
         title: "Invoice Tracking and Analytics",
         subtitle:
             "Gain insights into payment trends and optimize financial strategies.",
     },
     {
+        image: CashlessMachine,
         title: "Online Payment Integration",
         subtitle:
             "Seamlessly collect payments through integrated digital platforms.",
     },
 ];
 
-const InvoiceCard = ({ title, subtitle }: InvoiceCardProps) => {
+const InvoiceCard = ({ image, title, subtitle }: InvoiceCardProps) => {
     return (
-        <Paper sx={{ maxWidth: 345 }}>
-            <img
-                style={{ height: 140 }}
-                src="/static/images/cards/contemplative-reptile.jpg"
-                alt="green iguana"
+        <Paper
+            sx={{
+                maxWidth: 345,
+                p: 2,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                borderRadius: "16px", // Optional border radius for the card
+                boxShadow: 3,
+            }}
+        >
+            <Box
+                component="img"
+                src={image}
+                alt={title}
+                sx={{
+                    height: 140,
+                    width: "100%",
+                    objectFit: "cover",
+                    borderRadius: "12px", // Apply border radius to the image
+                    mb: 2,
+                }}
             />
-            <Stack>
+            <Stack mt={2} spacing={1}>
                 <Typography variant="h5">{title}</Typography>
                 <Typography variant="body2">{subtitle}</Typography>
             </Stack>
@@ -43,7 +66,7 @@ const InvoiceCard = ({ title, subtitle }: InvoiceCardProps) => {
 const InvoicesWork = () => {
     return (
         <Box sx={{ my: 10 }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Grid container spacing={4}>
                     <Grid size={{ lg: 12 }}>
                         <Stack
@@ -70,6 +93,7 @@ const InvoicesWork = () => {
                             {invoiceOption.map((option, index) => (
                                 <Grid key={index} size={{ md: 4 }}>
                                     <InvoiceCard
+                                        image={option.image}
                                         title={option.title}
                                         subtitle={option.subtitle}
                                     />

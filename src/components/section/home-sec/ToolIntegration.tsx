@@ -1,7 +1,7 @@
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../layout/BgColorLayout";
 import { Box, Button, Container, Typography } from "@mui/material";
-import { CardThree } from "../../../assets/images";
+import { CardThree } from "../../../assets";
 
 const ToolIntegration = () => {
     return (
@@ -9,8 +9,17 @@ const ToolIntegration = () => {
             <Container maxWidth="xl">
                 <Grid container>
                     <Grid size={{ md: 7 }}>
-                        <div>
-                            <img src={CardThree} />
+                        <div style={{ position: "relative" }}>
+                            <div>
+                                <img src={CardThree} />
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                             <div></div>
                         </div>
                     </Grid>

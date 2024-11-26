@@ -7,16 +7,18 @@ import {
     useTheme,
 } from "@mui/material";
 import BgColorLayout from "../../layout/BgColorLayout";
+import { HandCard, MultipleCard } from "../../../assets";
 
 const PayrollShort = () => {
     const theme = useTheme();
     return (
-        <Box sx={{ my: 10 }}>
+        <Box sx={{ my: 10, overflow: "hidden" }}>
             <BgColorLayout
                 height="auto"
                 bgcolor="#6f00eb"
                 styleProps={{
                     py: 10,
+                    position: "relative",
                 }}
             >
                 <Container maxWidth="lg">
@@ -34,6 +36,26 @@ const PayrollShort = () => {
                         <Button variant="contained">Know More</Button>
                     </Stack>
                 </Container>
+                <Box
+                    sx={{
+                        position: "absolute",
+                        top: -41,
+                        left: -288,
+                        bottom: "0%",
+                    }}
+                >
+                    <img src={MultipleCard} alt="multiple-card" />
+                </Box>
+                <Box
+                    sx={{
+                        position: "absolute",
+                        bottom: "-1%",
+                        right: "-6%",
+                        width: 450,
+                    }}
+                >
+                    <img src={HandCard} alt="hand-card" />
+                </Box>
             </BgColorLayout>
         </Box>
     );

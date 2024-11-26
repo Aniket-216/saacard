@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { MobileSix } from "../../../../assets/images";
+import { MobileSix } from "../../../../assets";
 
 const PreciseAccountability = () => {
     return (

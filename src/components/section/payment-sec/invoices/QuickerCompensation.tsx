@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 import FeatureLayout from "../../../layout/FeatureLayout";
-import { Mobile } from "../../../../assets/images";
+import { Mobile } from "../../../../assets";
 
 const compensationOptions = [
     {
@@ -26,8 +26,36 @@ const QuickerCompensation = () => {
                     }
                     OPTIONS={compensationOptions}
                     reverse={true}
+                    childrenStyleProps={{
+                        height: "100%",
+                        justifyContent: "center",
+                    }}
                 >
-                    <img src={Mobile} alt="mobile" />
+                    <img
+                        src={Mobile}
+                        style={{
+                            position: "absolute",
+                            top: "200px",
+                        }}
+                        alt="card"
+                    />
+                    <img
+                        src={""}
+                        style={{
+                            position: "absolute",
+                            top: "80px",
+                            left: "130px",
+                        }}
+                    />
+                    <img
+                        src={""}
+                        style={{
+                            position: "absolute",
+                            bottom: "70px",
+                            right: "80px",
+                            height: "250px",
+                        }}
+                    />
                 </FeatureLayout>
             </Container>
         </Box>

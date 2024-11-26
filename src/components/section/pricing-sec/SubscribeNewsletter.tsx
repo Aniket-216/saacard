@@ -6,7 +6,7 @@ import {
     TextField,
     Typography,
 } from "@mui/material";
-import { HandMobile } from "../../../assets/images";
+import { HandMobile } from "../../../assets";
 
 const SubscribeNewsletter = () => {
     return (

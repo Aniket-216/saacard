@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 import FeatureLayout from "../../../layout/FeatureLayout";
-import { Mobile } from "../../../../assets/images";
+import { Mobile } from "../../../../assets";
 
 const SimplifyingNumbersOptions = [
     {

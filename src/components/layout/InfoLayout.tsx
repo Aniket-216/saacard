@@ -21,13 +21,13 @@ const InfoLayout = ({
 }: InfoLayoutProps) => {
     return (
         <Container maxWidth="xl" sx={{ my: 15 }}>
-            <Grid container spacing={2}>
+            <Grid container spacing={4}>
                 <Grid size={{ ...(gridProps?.heading || { md: 12, lg: 6 }) }}>
-                    <Stack>
+                    <Stack spacing={3} p={2}>
                         <Typography variant="h3">{heading}</Typography>
-                        <Typography variant="caption">{subheading}</Typography>
+                        <Typography variant="body1">{subheading}</Typography>
                         <Box>
-                            <Button>Know More</Button>
+                            <Button variant="contained">Know More</Button>
                         </Box>
                     </Stack>
                 </Grid>

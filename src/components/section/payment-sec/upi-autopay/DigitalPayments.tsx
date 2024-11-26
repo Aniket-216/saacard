@@ -1,7 +1,7 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
-import { CardThree } from "../../../../assets/images";
+import { CardThree } from "../../../../assets";
 
 const DigitalPayments = () => {
     return (

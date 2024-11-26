@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { OptionProps } from "../../constant/featureOptions";
+import { SealCheckBold } from "../../assets";
 
 interface FeatureLayoutProps {
     children: React.ReactNode;
@@ -61,9 +62,15 @@ const FeatureLayout = ({
                                     <Stack
                                         key={index}
                                         direction={"row"}
-                                        spacing={3}
+                                        spacing={2}
                                     >
-                                        <Typography>X</Typography>
+                                        <Box>
+                                            <SealCheckBold
+                                                height={28}
+                                                width={28}
+                                                color="#6F00EB"
+                                            />
+                                        </Box>
                                         <Stack rowGap={1}>
                                             <Typography variant="h6">
                                                 {option.title}

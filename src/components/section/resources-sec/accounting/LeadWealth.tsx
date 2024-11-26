@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
-import { BigMobile } from "../../../../assets/images";
+import { BigMobile } from "../../../../assets";
 
 interface LeadWealthCardProps {
     id: number;

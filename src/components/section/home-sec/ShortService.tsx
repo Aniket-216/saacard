@@ -10,7 +10,7 @@ const ShortService = () => {
             }
             CARDOPTION={shortServiceCard}
             gridProps={{
-                heading: { md: 12, lg: 6 }, // Custom size for the heading
+                heading: { md: 12, lg: 6 },
             }}
         />
     );

@@ -1,6 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { Integration } from "../../../../assets/images";
+import { Integration } from "../../../../assets";
 
 const TaxExpertise = () => {
     return (

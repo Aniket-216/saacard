@@ -29,17 +29,19 @@ const SimpleSteps = () => {
         },
     ];
     return (
-        <Stack spacing={4}>
-            <Stack spacing={2} textAlign={"center"}>
-                <Typography variant="h3">
-                    The Fastest Way To Ignore Waitlist
-                </Typography>
-                <Box>
-                    <Button variant="contained">Begin For Payment</Button>
-                </Box>
+        <Box sx={{ my: 10 }}>
+            <Stack spacing={4}>
+                <Stack spacing={2} textAlign={"center"}>
+                    <Typography variant="h3">
+                        The Fastest Way To Ignore Waitlist
+                    </Typography>
+                    <Box>
+                        <Button variant="contained">Begin For Payment</Button>
+                    </Box>
+                </Stack>
+                <ScrollLayout steps={steps} />
             </Stack>
-            <ScrollLayout steps={steps} />
-        </Stack>
+        </Box>
     );
 };
 

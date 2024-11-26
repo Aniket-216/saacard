@@ -1,15 +1,15 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { Dashboard } from "../../../../assets/images";
+import { Card, Dashboard, DashboardOne } from "../../../../assets";
 
 const InvoiceManagement = () => {
     return (
         <Box sx={{ my: 10 }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Grid container spacing={4}>
                     <Grid size={{ md: 6 }}>
-                        <Stack>
-                            <Typography variant="h1">
+                        <Stack spacing={2}>
+                            <Typography variant="h2">
                                 Bringing Accuracy to the Forefront of Invoice
                                 Management
                             </Typography>
@@ -26,7 +26,38 @@ const InvoiceManagement = () => {
                         </Stack>
                     </Grid>
                     <Grid size={{ md: 6 }}>
-                        <img src={Dashboard} alt="dashboard" />
+                        <Stack
+                            height={"100%"}
+                            justifyContent={"center"}
+                            sx={{
+                                position: "relative",
+                            }}
+                        >
+                            <img
+                                src={Dashboard}
+                                alt="dashboard"
+                                style={{ position: "absolute", right: -100 }}
+                            />
+                            <img
+                                src={Card}
+                                alt="dashboard"
+                                style={{
+                                    position: "absolute",
+                                    height: 180,
+                                    bottom: 0,
+                                }}
+                            />
+                            <img
+                                src={DashboardOne}
+                                alt="dashboard"
+                                style={{
+                                    position: "absolute",
+                                    height: 340,
+                                    right: -240,
+                                    bottom: 0,
+                                }}
+                            />
+                        </Stack>
                     </Grid>
                 </Grid>
             </Container>

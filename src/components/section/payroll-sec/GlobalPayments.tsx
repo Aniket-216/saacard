@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { CardThree } from "../../../assets/images";
+import { CardThree } from "../../../assets";
 
 const GlobalPayments = () => {
     return (
