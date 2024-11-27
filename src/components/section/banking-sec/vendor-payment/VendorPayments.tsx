@@ -5,7 +5,7 @@ const VendorPayments = () => {
         <Box sx={{ my: 10 }}>
             <Container maxWidth="lg">
                 <Stack spacing={2}>
-                    <Typography variant="h1">
+                    <Typography variant="h3">
                         Reimagine the vendor payments for modern enterprises
                     </Typography>
                     <blockquote>

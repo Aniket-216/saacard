@@ -47,20 +47,14 @@ const InfoLayout = ({
                             icon={card.icon}
                             heading={card.heading}
                             subheading={card.subheading}
+                            headVariant="h6"
+                            subHeadingVariant="body1"
                             cardStyleProps={{
-                                minWidth: 354,
-                                minHeight: 296,
                                 boxShadow:
                                     "0 0 40px 5px rgba(132, 132, 132, .2)",
                                 borderRadius: "30px",
-                                textAlign: "center",
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
                             }}
                             cardContentStyleProps={{
-                                display: "flex",
-                                flexDirection: "column",
                                 gap: 2,
                             }}
                         />

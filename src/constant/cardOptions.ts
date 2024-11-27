@@ -1,36 +1,45 @@
+import React from "react";
+import {
+    AutomatedSubscriptionIcon,
+    PaymentButtonsIcon,
+    PaymentLinksIcon,
+    PaymentPagesIcon,
+    PaymentRoutingIcon,
+} from "../assets";
+
 export interface ShortServiceCardProps {
-    icon: string;
+    icon: React.ElementType;
     heading: string;
     subheading: string;
 }
 
 export const shortServiceCard: ShortServiceCardProps[] = [
     {
-        icon: "icon",
+        icon: PaymentLinksIcon,
         heading: "Payment Links",
         subheading:
             "Share payment links through email, SMS, or chat platforms and receive instant payments, making transactions a breeze.",
     },
     {
-        icon: "icon",
+        icon: PaymentPagesIcon,
         heading: "Payment Pages",
         subheading:
             "Launch your online store effortlessly, no coding required. Accept payments globally and locally with ease.",
     },
     {
-        icon: "icon",
+        icon: PaymentButtonsIcon,
         heading: "Payment Buttons",
         subheading:
             "Create, duplicate, and gather payments with ease using payment buttons. Handle one-time and subscription payments effortlessly.",
     },
     {
-        icon: "icon",
+        icon: AutomatedSubscriptionIcon,
         heading: "Automated Subscriptions",
         subheading:
             "Set up subscription plans with automated recurring payments across various payment methods for convenience.",
     },
     {
-        icon: "icon",
+        icon: PaymentRoutingIcon,
         heading: "Payment Routing",
         subheading:
             "Automatically distribute incoming payments to vendor accounts and efficiently manage marketplace financial flows.",

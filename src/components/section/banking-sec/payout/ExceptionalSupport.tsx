@@ -1,4 +1,5 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 import DashedCurvedArrow from "../../../shapes/DashedCurvedArrow";
 import BgColorLayout from "../../../layout/BgColorLayout";
 
@@ -41,30 +42,54 @@ const ExceptionalSupportFlow = ({
     subtitle,
 }: ExceptionalSupportOptionProp) => {
     return (
-        <Box sx={{ position: "relative", mb: 4 }}>
-            <Stack
-                direction={{ xs: "column", md: "row" }}
-                spacing={4}
-                // alignItems="center"
-                // justifyContent="flex-start"
+        <>
+            <Grid
+                size={{ md: 3 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
             >
-                {/* Title and Subtitle */}
-                <Stack
-                    spacing={1}
-                    sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}
-                >
-                    <Typography variant="h5"> {`0${id}.`}</Typography>
+                <Stack spacing={1}>
+                    <Typography variant="h5" color="#6f00eb">
+                        {`0${id}.`}
+                    </Typography>
                     <Typography variant="h6" fontWeight="bold">
                         {title}
                     </Typography>
-                    <Typography variant="body1" color="textSecondary">
-                        {subtitle}
-                    </Typography>
+                    <Typography variant="body1">{subtitle}</Typography>
                 </Stack>
-            </Stack>
-            {/* Dashed Arrow */}
-            {id < exceptionalSupportOption.length && <DashedCurvedArrow />}
-        </Box>
+            </Grid>
+            <Grid
+                size={{ md: 3 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
+            ></Grid>
+            <Grid
+                size={{ md: 3 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
+            ></Grid>
+            <Grid
+                size={{ md: 3 }}
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                }}
+            ></Grid>
+
+            <Grid size={{ md: 3 }}>
+                <Stack alignItems={"center"}>
+                    {id < exceptionalSupportOption.length && (
+                        <DashedCurvedArrow />
+                    )}
+                </Stack>
+            </Grid>
+        </>
     );
 };
 
@@ -89,12 +114,14 @@ const ExceptionalSupport = () => {
 
                         {/* Steps */}
                         <Stack sx={{ mt: 4 }}>
-                            {exceptionalSupportOption.map((option) => (
-                                <ExceptionalSupportFlow
-                                    key={option.id}
-                                    {...option}
-                                />
-                            ))}
+                            <Grid container spacing={3}>
+                                {exceptionalSupportOption.map((option) => (
+                                    <ExceptionalSupportFlow
+                                        key={option.id}
+                                        {...option}
+                                    />
+                                ))}
+                            </Grid>
                         </Stack>
                     </Stack>
                 </Container>

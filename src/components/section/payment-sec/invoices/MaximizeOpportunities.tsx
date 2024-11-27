@@ -40,6 +40,7 @@ const MaximizeOpportunities = () => {
                                         zIndex: 0,
                                         right: 170,
                                         bottom: -160,
+                                        rotate: "-20deg",
                                     }}
                                 />
                             </Stack>

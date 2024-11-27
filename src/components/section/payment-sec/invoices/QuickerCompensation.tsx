@@ -1,6 +1,6 @@
-import { Box, Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import FeatureLayout from "../../../layout/FeatureLayout";
-import { Mobile } from "../../../../assets";
+import { Card, Mobile } from "../../../../assets";
 
 const compensationOptions = [
     {
@@ -34,28 +34,56 @@ const QuickerCompensation = () => {
                     <img
                         src={Mobile}
                         style={{
-                            position: "absolute",
                             top: "200px",
                         }}
                         alt="card"
                     />
                     <img
-                        src={""}
+                        src={Card}
                         style={{
                             position: "absolute",
-                            top: "80px",
-                            left: "130px",
-                        }}
-                    />
-                    <img
-                        src={""}
-                        style={{
-                            position: "absolute",
-                            bottom: "70px",
-                            right: "80px",
+                            bottom: "-20px",
+                            right: "50px",
                             height: "250px",
+                            zIndex: -1,
                         }}
                     />
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: "-40px",
+                            right: "200px",
+                            height: "140px",
+                            width: "140px",
+                            backgroundColor: "#F4F4F4",
+                            borderRadius: "50%",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            flexDirection: "column",
+                        }}
+                    >
+                        <Typography variant="h6">3500</Typography>
+                        <Typography variant="body1">Trusted Partner</Typography>
+                    </div>
+                    <div
+                        style={{
+                            position: "absolute",
+                            bottom: "20px",
+                            left: "220px",
+                            height: "140px",
+                            width: "140px",
+                            backgroundColor: "#F4F4F4",
+                            borderRadius: "20px",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            flexDirection: "column",
+                        }}
+                    >
+                        <Typography variant="h6">1M</Typography>
+                        <Typography variant="body1">Active User</Typography>
+                    </div>
                 </FeatureLayout>
             </Container>
         </Box>

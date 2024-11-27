@@ -1,6 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { MobileSix } from "../../../../assets";
+import { motion } from "motion/react";
 
 const PreciseAccountability = () => {
     return (
@@ -8,7 +9,11 @@ const PreciseAccountability = () => {
             <Container maxWidth="xl">
                 <Grid container spacing={4}>
                     <Grid size={{ md: 8 }}>
-                        <Stack height={"100%"} spacing={4}>
+                        <Stack
+                            height={"100%"}
+                            spacing={4}
+                            justifyContent={"center"}
+                        >
                             <Typography variant="h1">
                                 Taking precise Accountability for your Accounts
                             </Typography>
@@ -23,7 +28,20 @@ const PreciseAccountability = () => {
                         </Stack>
                     </Grid>
                     <Grid size={{ md: 4 }}>
-                        <img src={MobileSix} alt="mobile-six" />
+                        <motion.img
+                            src={MobileSix}
+                            alt="mobile-six"
+                            style={{ width: "100%", display: "block" }}
+                            initial={{
+                                transform: "translateX(100%)",
+                                opacity: 0,
+                            }} // Starting offscreen
+                            animate={{ transform: "translateX(0)", opacity: 1 }} // Sliding in
+                            transition={{
+                                duration: 1, // Duration in seconds
+                                easing: "ease-out", // Easing function
+                            }}
+                        />
                     </Grid>
                 </Grid>
             </Container>

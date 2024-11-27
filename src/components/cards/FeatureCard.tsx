@@ -50,10 +50,20 @@ const FeatureCard = ({
                 }}
             >
                 <Box sx={{ mb: 2, ...iconStyleProps }}>{icon}</Box>
-                <Typography variant={headVariant || "h5"}>{heading}</Typography>
+                <Typography
+                    variant={headVariant || "h5"}
+                    sx={{
+                        color: "inherit",
+                    }}
+                >
+                    {heading}
+                </Typography>
                 <Typography
                     variant={subHeadingVariant || "subtitle1"}
                     component={"p"}
+                    sx={{
+                        color: "inherit",
+                    }}
                 >
                     {subheading}
                 </Typography>

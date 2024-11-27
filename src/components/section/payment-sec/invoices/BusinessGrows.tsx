@@ -1,34 +1,48 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FeatureCard from "../../../cards/FeatureCard";
+import {
+    DiversePayment,
+    EffortlessBilling,
+    InstantPaymentBold,
+    InvoiceCreation,
+    OperationalEfficiency,
+    StreamlinedInvoicing,
+} from "../../../../assets";
 
 const businessOption = [
     {
+        icon: <InvoiceCreation height={32} width={32} />,
         title: "Invoice Creation Made Easy",
         subtitle:
             "Utilize our user-friendly online invoicing system to effortlessly deliver invoices directly to your clients' inboxes.",
     },
     {
+        icon: <StreamlinedInvoicing height={32} width={32} />,
         title: "Streamlined Online Invoicing",
         subtitle:
             "Empower your clients with diverse payment choices, all accessible through (website name).",
     },
     {
+        icon: <InstantPaymentBold height={32} width={32} />,
         title: "Instant Payment Gratification",
         subtitle:
             "Boost business growth through accelerated cash flow and diminished outstanding receivables.",
     },
     {
+        icon: <OperationalEfficiency height={32} width={32} />,
         title: "Operational Efficiency Simplified",
         subtitle:
             "Effortlessly monitor outstanding payments, establish automated payment reminders, and streamline recurring invoicing with our intuitive tools.",
     },
     {
+        icon: <EffortlessBilling height={32} width={32} />,
         title: "Effortless Billing",
         subtitle:
             "Experience seamless billing with our platform, sending invoices effortlessly and tracking payments with precision.",
     },
     {
+        icon: <DiversePayment height={32} width={32} />,
         title: "Diverse Payment Options",
         subtitle:
             "Offering flexibility by providing a various range of payment methods through our (website name).",
@@ -74,13 +88,12 @@ const BusinessGrows = () => {
                                                     ? "0 0 30px 30px" // Fifth card
                                                     : "0", // Default for other cards
                                     },
-                                    // padding: "50px 20px",
                                 };
 
                                 return (
                                     <Grid key={index} size={{ sm: 12, md: 4 }}>
                                         <FeatureCard
-                                            icon={"icon"}
+                                            icon={option.icon}
                                             heading={option.title}
                                             subheading={option.subtitle}
                                             headVariant="h6"

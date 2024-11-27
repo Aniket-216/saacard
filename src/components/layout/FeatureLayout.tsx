@@ -24,7 +24,7 @@ const FeatureLayout = ({
     return (
         <Container maxWidth={"xl"}>
             <Grid container spacing={7}>
-                <Grid size={7} order={reverse ? 2 : 1}>
+                <Grid size={6} order={reverse ? 2 : 1}>
                     <Stack
                         sx={{ position: "relative", ...childrenStyleProps }}
                         alignItems={"center"}
@@ -32,7 +32,7 @@ const FeatureLayout = ({
                         {children}
                     </Stack>
                 </Grid>
-                <Grid size={5} order={reverse ? 1 : 2}>
+                <Grid size={6} order={reverse ? 1 : 2}>
                     <Stack spacing={4}>
                         <Stack spacing={2}>
                             <Typography

@@ -1,35 +1,58 @@
 import { Box, Container, Paper, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+import {
+    PricingOne,
+    PricingThree,
+    PricingTwo,
+    SealCheckBold,
+} from "../../../../assets";
 
 interface TransactionCardProps {
     image: string;
     imgText: string;
-    icon: string;
+    Icon: React.ElementType;
     bulletPoints: string[];
 }
 
 const TransactionCard = ({
     image,
     imgText,
-    icon,
+    Icon,
     bulletPoints,
 }: TransactionCardProps) => {
     return (
-        <Paper elevation={3} sx={{ p: 3 }}>
-            <Stack spacing={2}>
-                <Paper elevation={3}>
-                    <Stack>
+        <Paper elevation={3} sx={{ p: 3, borderRadius: 4 }}>
+            <Stack spacing={5}>
+                <Paper
+                    elevation={3}
+                    sx={{ borderRadius: 2, overflow: "hidden" }}
+                >
+                    <Stack
+                        sx={{
+                            position: "relative",
+                            height: "100%",
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
                         <img src={image} />
-                        <Typography>{imgText}</Typography>
+                        <Typography variant="h6" sx={{ position: "absolute" }}>
+                            {imgText}
+                        </Typography>
                     </Stack>
                 </Paper>
-
-                {bulletPoints.map((bulletPoint, index) => (
-                    <Stack key={index} flexDirection={"row"} columnGap={2}>
-                        <Typography>{icon}</Typography>
-                        <Typography>{bulletPoint}</Typography>
-                    </Stack>
-                ))}
+                <Stack spacing={2}>
+                    {bulletPoints.map((bulletPoint, index) => (
+                        <Stack key={index} flexDirection={"row"} columnGap={2}>
+                            <Icon height={28} width={28} color="#b77ff5" />
+                            <Typography variant="body1">
+                                {bulletPoint}
+                            </Typography>
+                        </Stack>
+                    ))}
+                </Stack>
             </Stack>
         </Paper>
     );
@@ -39,16 +62,16 @@ interface TransactionCardOptionProps {
     id: number;
     image: string;
     imgText: string;
-    icon: string;
+    icon: React.ElementType;
     text: string[];
 }
 
 const transactionCardOption: TransactionCardOptionProps[] = [
     {
         id: 1,
-        image: "image",
+        image: PricingOne,
         imgText: "Settlements",
-        icon: "icon",
+        icon: SealCheckBold,
         text: [
             "Receive online customer payments directly",
             "Choose from bank account, digital wallet, or payment card.",
@@ -58,9 +81,9 @@ const transactionCardOption: TransactionCardOptionProps[] = [
     },
     {
         id: 2,
-        image: "image",
+        image: PricingTwo,
         imgText: "Commercial Payments",
-        icon: "icon",
+        icon: SealCheckBold,
         text: [
             "Enjoy direct settlements offering speed and simplicity.",
             "Streamline the payment process for efficiency.",
@@ -70,9 +93,9 @@ const transactionCardOption: TransactionCardOptionProps[] = [
     },
     {
         id: 3,
-        image: "image",
+        image: PricingThree,
         imgText: "API Integration",
-        icon: "icon",
+        icon: SealCheckBold,
         text: [
             "Seamlessly integrate our powerful payout API.",
             "Enhance your application or platform's functionality.",
@@ -85,10 +108,10 @@ const transactionCardOption: TransactionCardOptionProps[] = [
 const EvolvingTransactions = () => {
     return (
         <Box sx={{ my: 10 }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Grid container spacing={4}>
                     <Grid size={{ lg: 12 }}>
-                        <Stack>
+                        <Stack textAlign={"center"}>
                             <Typography variant="h3">
                                 Evolving Transactions into Legendary Moments
                             </Typography>
@@ -105,7 +128,7 @@ const EvolvingTransactions = () => {
                             <TransactionCard
                                 image={option.image}
                                 imgText={option.imgText}
-                                icon={option.icon}
+                                Icon={option.icon}
                                 bulletPoints={option.text}
                             />
                         </Grid>

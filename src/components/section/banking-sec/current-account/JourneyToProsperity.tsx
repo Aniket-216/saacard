@@ -9,6 +9,9 @@ const JourneyToProsperity = () => {
                 "We excel in providing Precision-driven fintech solutions for a world where every transaction matters"
             }
             CARDOPTION={journeyToProsperityCard}
+            gridProps={{
+                heading: { md: 12, lg: 6 },
+            }}
         />
     );
 };

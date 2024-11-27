@@ -14,6 +14,11 @@ import DashboardOne from "./images/dashboard-01.png";
 import Cards from "./images/blog-01.jpg";
 import CashlessMachine from "./images/blog-02.jpg";
 import Cashless from "./images/blog-03.jpg";
+import LogoIcon from "./images/logo-icon.svg";
+import AboutTwo from "./images/about-02.jpg";
+import PricingOne from "./images/pricing-01.jpg";
+import PricingTwo from "./images/pricing-02.jpg";
+import PricingThree from "./images/pricing-03.jpg";
 
 import Integration from "./images/integrations-01.webp";
 
@@ -37,6 +42,8 @@ import MonthlyPaymentStatus from "./images/Payment-method.svg";
 import UpiVideo from "./video/transcode.mp4";
 
 export {
+    AboutTwo,
+    LogoIcon,
     Card,
     CardBack,
     Cards,
@@ -71,6 +78,9 @@ export {
     MonthlyPaymentStatus,
     UpiVideo,
     DashboardOne,
+    PricingOne,
+    PricingTwo,
+    PricingThree,
 };
 
 export {
@@ -92,6 +102,44 @@ export {
 } from "./svg/Bank";
 
 export {
+    DiscordLogo,
+    DiscordLogoThin,
+    DiscordLogoLight,
+    DiscordLogoBold,
+    DiscordLogoFill,
+    DiscordLogoDuotone,
+} from "./svg/DiscordLogo";
+
+export { DropboxLogoBold } from "./svg/DropboxLogo";
+
+export {
+    SlackLogo,
+    SlackLogoThin,
+    SlackLogoLight,
+    SlackLogoBold,
+    SlackLogoFill,
+    SlackLogoDuotone,
+} from "./svg/SlackLogo";
+
+export {
+    TelegramLogo,
+    TelegramLogoThin,
+    TelegramLogoLight,
+    TelegramLogoBold,
+    TelegramLogoFill,
+    TelegramLogoDuotone,
+} from "./svg/TelegramLogo";
+
+export {
+    YoutubeLogo,
+    YoutubeLogoThin,
+    YoutubeLogoLight,
+    YoutubeLogoBold,
+    YoutubeLogoFill,
+    YoutubeLogoDuotone,
+} from "./svg/YoutubeLogo";
+
+export {
     FinanceSuite,
     FinanceSuiteThin,
     FinanceSuiteLight,
@@ -99,6 +147,15 @@ export {
     FinanceSuiteFill,
     FinanceSuiteDuotone,
 } from "./svg/FinanceSuite";
+
+export {
+    InstantPayment,
+    InstantPaymentThin,
+    InstantPaymentLight,
+    InstantPaymentBold,
+    InstantPaymentFill,
+    InstantPaymentDuotone,
+} from "./svg/InstantPayment";
 
 export {
     Security,
@@ -119,3 +176,16 @@ export { EfficientOrderFulfillment } from "./svg/EfficientOrderFulfillment";
 export { DeliveryTracking } from "./svg/DeliveryTracking";
 export { AutomatedBilling } from "./svg/AutomatedBilling";
 export { SecurePaymentHandling } from "./svg/SecurePaymentHandling";
+export { CircleShape } from "./svg/CircleShape";
+export { InvoiceCreation } from "./svg/InvoiceCreation";
+export { StreamlinedInvoicing } from "./svg/StreamlinedInvoicing";
+export { OperationalEfficiency } from "./svg/OperationalEfficiency";
+export { EffortlessBilling } from "./svg/EffortlessBilling";
+export { DiversePayment } from "./svg/DiversePayment";
+export { DriveLogo } from "./svg/DriveLogo";
+export { InfoMedicsLogo } from "./svg/InfoMedicsLogo";
+export { PaymentRoutingIcon } from "./svg/PaymentRouting";
+export { AutomatedSubscriptionIcon } from "./svg/AutomatedSubscriptions";
+export { PaymentButtonsIcon } from "./svg/PaymentButtons";
+export { PaymentPagesIcon } from "./svg/PaymentPages";
+export { PaymentLinksIcon } from "./svg/PaymentLinks";
