@@ -1,10 +1,15 @@
 import React from "react";
 import {
+    AdaptiveAccountFeaturesIcon,
     AutomatedSubscriptionIcon,
+    CustomerServiceIcon,
     PaymentButtonsIcon,
     PaymentLinksIcon,
     PaymentPagesIcon,
     PaymentRoutingIcon,
+    RealTimeTransactionMonitoringIcon,
+    SeamlessOnlinePaymentsIcon,
+    SimplifiedBankingProcessIcon,
 } from "../assets";
 
 export interface ShortServiceCardProps {
@@ -48,31 +53,31 @@ export const shortServiceCard: ShortServiceCardProps[] = [
 
 export const journeyToProsperityCard: ShortServiceCardProps[] = [
     {
-        icon: "icon",
+        icon: SimplifiedBankingProcessIcon,
         heading: "Simplified Banking Process",
         subheading:
             "With our current accounts, you can easily manage transactions and access your money.",
     },
     {
-        icon: "icon",
+        icon: RealTimeTransactionMonitoringIcon,
         heading: "Real-Time Transaction Monitoring",
         subheading:
             "Instant information on all of your payment activity help you maintain control over your funds.",
     },
     {
-        icon: "icon",
+        icon: SeamlessOnlinePaymentsIcon,
         heading: "Seamless Online Payments",
         subheading:
             "Use our secure current account services to quickly and easily make payments and transfers",
     },
     {
-        icon: "icon",
+        icon: AdaptiveAccountFeaturesIcon,
         heading: "Adaptive Account Features",
         subheading:
             "Use flexible options and features to configure your current account to meet your needs.",
     },
     {
-        icon: "icon",
+        icon: CustomerServiceIcon,
         heading: "24-hour customer service",
         subheading:
             "Customers with a current account can contact us at any time to get assistance.",

@@ -1,5 +1,6 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import ScrollLayout, { StepProps } from "../../layout/ScrollLayout";
+import { BigMobile, FormSubmit, Mobile } from "../../../assets";
 
 const SwiftDelivery = () => {
     const steps: StepProps[] = [
@@ -9,7 +10,7 @@ const SwiftDelivery = () => {
             description:
                 "Start for free and provide essential company details to initiate your account setup effortlessly with (Website Name)..",
             type: "image",
-            image: "path/to/image1.png",
+            image: BigMobile,
         },
         {
             id: 2,
@@ -17,7 +18,7 @@ const SwiftDelivery = () => {
             description:
                 "Easily enter employee information on the dashboard or allow them to self-onboard for convenience.",
             type: "content",
-            image: "path/to/image2.png",
+            image: FormSubmit,
         },
         {
             id: 3,
@@ -25,23 +26,25 @@ const SwiftDelivery = () => {
             description:
                 "After adding employee and compliance data, proceed to run your first payroll smoothly and efficiently.",
             type: "image",
-            image: "path/to/image3.png",
+            image: Mobile,
         },
     ];
     return (
-        <Stack spacing={4}>
-            <Stack spacing={2} textAlign={"center"}>
-                <Typography variant="h3">
-                    Ensure Swift Delivery for All Your Payments
-                </Typography>
-                <Typography component={"p"} variant="body1">
-                    (Website Name) redefines payment innovation, merging
-                    technology rigor with unwavering financial security, making
-                    payments safe and efficient
-                </Typography>
+        <Box sx={{ my: 10 }}>
+            <Stack spacing={4}>
+                <Stack spacing={2} textAlign={"center"}>
+                    <Typography variant="h3">
+                        Ensure Swift Delivery for All Your Payments
+                    </Typography>
+                    <Typography component={"p"} variant="body1">
+                        (Website Name) redefines payment innovation, merging
+                        technology rigor with unwavering financial security,
+                        making payments safe and efficient
+                    </Typography>
+                </Stack>
+                <ScrollLayout steps={steps} reverse={true} />
             </Stack>
-            <ScrollLayout steps={steps} reverse={true} />
-        </Stack>
+        </Box>
     );
 };
 export default SwiftDelivery;

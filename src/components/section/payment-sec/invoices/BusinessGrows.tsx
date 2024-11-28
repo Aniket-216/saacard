@@ -12,37 +12,37 @@ import {
 
 const businessOption = [
     {
-        icon: <InvoiceCreation height={32} width={32} />,
+        icon: InvoiceCreation,
         title: "Invoice Creation Made Easy",
         subtitle:
             "Utilize our user-friendly online invoicing system to effortlessly deliver invoices directly to your clients' inboxes.",
     },
     {
-        icon: <StreamlinedInvoicing height={32} width={32} />,
+        icon: StreamlinedInvoicing,
         title: "Streamlined Online Invoicing",
         subtitle:
             "Empower your clients with diverse payment choices, all accessible through (website name).",
     },
     {
-        icon: <InstantPaymentBold height={32} width={32} />,
+        icon: InstantPaymentBold,
         title: "Instant Payment Gratification",
         subtitle:
             "Boost business growth through accelerated cash flow and diminished outstanding receivables.",
     },
     {
-        icon: <OperationalEfficiency height={32} width={32} />,
+        icon: OperationalEfficiency,
         title: "Operational Efficiency Simplified",
         subtitle:
             "Effortlessly monitor outstanding payments, establish automated payment reminders, and streamline recurring invoicing with our intuitive tools.",
     },
     {
-        icon: <EffortlessBilling height={32} width={32} />,
+        icon: EffortlessBilling,
         title: "Effortless Billing",
         subtitle:
             "Experience seamless billing with our platform, sending invoices effortlessly and tracking payments with precision.",
     },
     {
-        icon: <DiversePayment height={32} width={32} />,
+        icon: DiversePayment,
         title: "Diverse Payment Options",
         subtitle:
             "Offering flexibility by providing a various range of payment methods through our (website name).",
@@ -93,7 +93,7 @@ const BusinessGrows = () => {
                                 return (
                                     <Grid key={index} size={{ sm: 12, md: 4 }}>
                                         <FeatureCard
-                                            icon={option.icon}
+                                            Icon={option.icon}
                                             heading={option.title}
                                             subheading={option.subtitle}
                                             headVariant="h6"

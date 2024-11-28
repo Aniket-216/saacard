@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2"; // Ensure you are importing Grid2 correctly
+import { CircleShape } from "../../assets";
 
 export interface StepProps {
     id: number;
@@ -115,9 +116,6 @@ const ScrollLayout = ({ steps, reverse = false }: ScrollLayoutProps) => {
                                     <Grid size={{ md: 12, lg: 6 }}>
                                         <Box
                                             sx={{
-                                                backgroundColor: "#fff",
-                                                borderRadius: 2,
-                                                boxShadow: 3,
                                                 p: 3,
                                                 textAlign: "center",
                                             }}
@@ -136,15 +134,34 @@ const ScrollLayout = ({ steps, reverse = false }: ScrollLayoutProps) => {
                                     {/* Content */}
                                     <Grid size={{ md: 12, lg: 6 }}>
                                         <Stack spacing={2}>
-                                            <Typography
-                                                variant="h6"
+                                            <Box
                                                 sx={{
-                                                    color: "#6200ea",
-                                                    fontWeight: "bold",
+                                                    position: "relative",
+                                                    width: 50,
+                                                    height: 50,
                                                 }}
                                             >
-                                                {`0${step.id}`}
-                                            </Typography>
+                                                <CircleShape
+                                                    height={50}
+                                                    width={50}
+                                                    color="#6f00eb"
+                                                />
+                                                <Typography
+                                                    variant="h5"
+                                                    sx={{
+                                                        position: "absolute",
+                                                        top: "50%",
+                                                        left: "50%",
+                                                        transform:
+                                                            "translate(-50%, -50%)",
+                                                        color: "white",
+                                                        fontWeight: "bold",
+                                                    }}
+                                                >
+                                                    {`0${step.id}`}
+                                                </Typography>
+                                            </Box>
+
                                             <Typography
                                                 variant="h4"
                                                 sx={{ fontWeight: "bold" }}

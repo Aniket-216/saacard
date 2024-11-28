@@ -12,7 +12,7 @@ const TurbochargedCard = ({ title, subtitle }: TurbochargedCardProps) => {
             sx={{
                 border: "1px solid #6f00eb",
                 borderRadius: 5,
-                padding: 8,
+                padding: 4,
                 height: "100%",
             }}
         >
@@ -74,7 +74,7 @@ const turbochargedOption: TurbochargedOptionProps[] = [
 const TurbochargedGrowth = () => {
     return (
         <Box sx={{ my: 10 }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Grid container spacing={4}>
                     <Grid size={{ lg: 12 }}>
                         <Stack spacing={2} textAlign={"center"}>

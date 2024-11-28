@@ -1,8 +1,10 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { Integration } from "../../../../assets";
+import { useNavigate } from "react-router-dom";
 
 const TaxExpertise = () => {
+    const navigate = useNavigate();
     return (
         <Box sx={{ my: 10 }}>
             <Grid container spacing={4}>
@@ -20,7 +22,12 @@ const TaxExpertise = () => {
                             full fledge.
                         </Typography>
                         <Box>
-                            <Button variant="contained">Sign Up</Button>
+                            <Button
+                                variant="contained"
+                                onClick={() => navigate("/sign-up")}
+                            >
+                                Sign Up
+                            </Button>
                         </Box>
                     </Stack>
                 </Grid>

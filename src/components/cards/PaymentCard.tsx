@@ -11,6 +11,8 @@ const PaymentCard = ({ option }: { option: PaymentOption }) => {
             sx={{
                 minWidth: 275,
                 backgroundImage: "linear-gradient(#110d34, #9e54f0)",
+                borderRadius: 5,
+                padding: 4,
             }}
         >
             <CardContent>
@@ -32,7 +34,7 @@ const PaymentCard = ({ option }: { option: PaymentOption }) => {
                     </Stack>
                     <Divider />
                     <Stack>
-                        <Typography variant="h6">
+                        <Typography variant="h6" color="white">
                             What&apos;s included?
                         </Typography>
                         {option.features.map((feature, idx) => (
@@ -41,7 +43,7 @@ const PaymentCard = ({ option }: { option: PaymentOption }) => {
                                 flexDirection={"row"}
                                 alignItems="center"
                             >
-                                <Typography>{feature}</Typography>
+                                <Typography color="white">{feature}</Typography>
                             </Stack>
                         ))}
                     </Stack>

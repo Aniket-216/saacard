@@ -44,7 +44,7 @@ const InfoLayout = ({
                         spacing={2}
                     >
                         <FeatureCard
-                            icon={card.icon}
+                            Icon={card.icon}
                             heading={card.heading}
                             subheading={card.subheading}
                             headVariant="h6"

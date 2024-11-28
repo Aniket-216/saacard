@@ -12,45 +12,37 @@ import {
 
 const recurringPayment = [
     {
-        icon: (
-            <CustomerPurchaseManagement
-                height={34}
-                width={34}
-                color="#6f00eb"
-            />
-        ),
+        icon: CustomerPurchaseManagement,
         title: "Customer Purchase Management",
         subtitle:
             "Simplify order acceptance and management to enhance customer satisfaction and operational efficiency.",
     },
     {
-        icon: <AccurateCostEstimation height={34} width={34} color="#6f00eb" />,
+        icon: AccurateCostEstimation,
         title: "Accurate Cost Estimation",
         subtitle:
             "Provide precise cost estimates for potential orders, boosting transparency and trust in pricing.",
     },
     {
-        icon: (
-            <EfficientOrderFulfillment height={34} width={34} color="#6f00eb" />
-        ),
+        icon: EfficientOrderFulfillment,
         title: "Efficient Order Fulfillment",
         subtitle:
             "Optimize sales order processing and transactions for swift, error-free order completion.",
     },
     {
-        icon: <DeliveryTracking height={34} width={34} color="#6f00eb" />,
+        icon: DeliveryTracking,
         title: "Delivery Tracking",
         subtitle:
             "Monitor product or service deliveries meticulously, ensuring timely and reliable service.",
     },
     {
-        icon: <AutomatedBilling height={34} width={34} color="#6f00eb" />,
+        icon: AutomatedBilling,
         title: "Automated Billing",
         subtitle:
             "Streamline invoice creation and billing processes, making financial transactions hassle-free and secure.",
     },
     {
-        icon: <SecurePaymentHandling height={34} width={34} color="#6f00eb" />,
+        icon: SecurePaymentHandling,
         title: "Secure Payment Handling",
         subtitle:
             "Prioritize transaction and payment security, safeguarding sensitive financial information for peace of mind.",
@@ -92,7 +84,7 @@ const RecurringPayment = () => {
                                     size={{ sm: 12, md: 6, lg: 4 }}
                                 >
                                     <FeatureCard
-                                        icon={pay.icon}
+                                        Icon={pay.icon}
                                         heading={pay.title}
                                         subheading={pay.subtitle}
                                         headVariant="h6"

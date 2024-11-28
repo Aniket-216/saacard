@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import BgColorLayout from "../../../layout/BgColorLayout";
-import { BigMobile } from "../../../../assets";
+import { BigMobile, CircleShape } from "../../../../assets";
 
 interface LeadWealthCardProps {
     id: number;
@@ -12,6 +12,7 @@ const LeadWealthCard = ({ id, title }: LeadWealthCardProps) => {
     return (
         <Stack
             flexDirection="row"
+            alignItems={"center"}
             color="black"
             sx={{
                 background: "white",
@@ -20,9 +21,22 @@ const LeadWealthCard = ({ id, title }: LeadWealthCardProps) => {
                 gap: 2,
             }}
         >
-            <Typography variant="h5" color="inherit">
-                {`${id}.`}
-            </Typography>
+            <Box sx={{ position: "relative", width: 50, height: 50 }}>
+                <CircleShape height={50} width={50} color="#6f00eb" />
+                <Typography
+                    variant="h5"
+                    sx={{
+                        position: "absolute",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        color: "white",
+                        fontWeight: "bold",
+                    }}
+                >
+                    {id}
+                </Typography>
+            </Box>
 
             <Typography variant="h5" color="inherit">
                 {title}

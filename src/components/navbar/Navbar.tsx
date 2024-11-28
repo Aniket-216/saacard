@@ -9,10 +9,13 @@ import {
     IconButton,
     Stack,
     CssBaseline,
+    Fab,
 } from "@mui/material";
 import { Link, NavLink } from "react-router-dom";
 import { navItems } from "./navbarOptions"; // Ensure you have the navItems defined
 import { Sascard } from "../../assets";
+import ScrollToTop from "../ScrollToTop";
+import { KeyboardArrowUp } from "@mui/icons-material";
 
 const NavList = ({ ...props }) => {
     const [anchorEls, setAnchorEls] = useState<Map<string, HTMLElement | null>>(
@@ -196,6 +199,13 @@ const Navbar: React.FC = () => {
                     </Toolbar>
                 </Container>
             </AppBar>
+            {/* Anchor for ScrollToTop */}
+            <div id="back-to-top-anchor" />
+            <ScrollToTop>
+                <Fab size="small" aria-label="scroll back to top">
+                    <KeyboardArrowUp />
+                </Fab>
+            </ScrollToTop>
         </>
     );
 };

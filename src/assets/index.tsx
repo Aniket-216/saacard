@@ -38,10 +38,12 @@ import MasterCard from "./images/mastercard.svg";
 import Maestro from "./images/maestro.svg";
 import SavingGrowth from "./images/save-growth.svg";
 import MonthlyPaymentStatus from "./images/Payment-method.svg";
+import FormSubmit from "./images/form-submit.svg";
 
 import UpiVideo from "./video/transcode.mp4";
 
 export {
+    FormSubmit,
     AboutTwo,
     LogoIcon,
     Card,
@@ -189,3 +191,20 @@ export { AutomatedSubscriptionIcon } from "./svg/AutomatedSubscriptions";
 export { PaymentButtonsIcon } from "./svg/PaymentButtons";
 export { PaymentPagesIcon } from "./svg/PaymentPages";
 export { PaymentLinksIcon } from "./svg/PaymentLinks";
+
+export { SimplifiedBankingProcessIcon } from "./svg/SimplifiedBankingProcessIcon";
+export { RealTimeTransactionMonitoringIcon } from "./svg/RealTimeTransactionMonitoringIcon";
+export { SeamlessOnlinePaymentsIcon } from "./svg/SeamlessOnlinePaymentsIcon";
+export { AdaptiveAccountFeaturesIcon } from "./svg/AdaptiveAccountFeaturesIcon";
+export { CustomerServiceIcon } from "./svg/CustomerServiceIcon";
+
+export { RegistrationAndCompanyIcon } from "./svg/RegistrationAndCompanyIcon";
+export { InitiatePayrollProcessingIcon } from "./svg/InitiatePayrollProcessingIcon";
+export { EfficientWorkforceOnboardingIcon } from "./svg/EfficientWorkforceOnboardingIcon";
+
+export { FinancialClarityIcon } from "./svg/FinancialClarityIcon";
+export { ExpertSolutionIcon } from "./svg/ExpertSolutionIcon";
+export { AccurateRecordsIcon } from "./svg/AccurateRecordsIcon";
+export { GrowthPartnershipIcon } from "./svg/GrowthPartnershipIcon";
+export { ObservanceIcon } from "./svg/ObservanceIcon";
+export { StrategicInsightsIcon } from "./svg/StrategicInsightsIcon";

@@ -1,11 +1,10 @@
-import { Box } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { TypographyProps } from "@mui/material/Typography";
 
 interface FeatureCardProps {
-    icon: React.ReactNode;
+    Icon: React.ElementType;
     heading: string;
     subheading?: string;
     iconStyleProps?: object;
@@ -16,7 +15,7 @@ interface FeatureCardProps {
 }
 
 const FeatureCard = ({
-    icon,
+    Icon,
     heading,
     subheading,
     iconStyleProps,
@@ -49,7 +48,11 @@ const FeatureCard = ({
                     ...cardContentStyleProps, // Allow customization
                 }}
             >
-                <Box sx={{ mb: 2, ...iconStyleProps }}>{icon}</Box>
+                <Icon
+                    height={40}
+                    width={40}
+                    sx={{ color: "#6f00eb", ...iconStyleProps }}
+                />
                 <Typography
                     variant={headVariant || "h5"}
                     sx={{

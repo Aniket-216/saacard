@@ -14,65 +14,36 @@ import { CustomerSupport } from "../../../../assets/svg/CustomerSupport";
 
 const features = [
     {
-        icon: (
-            <Access
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: Access,
+
         title: "Affordable Access",
     },
     {
-        icon: (
-            <CustomerSupport
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: CustomerSupport,
         title: "24/7 Customer Support",
     },
     {
-        icon: (
-            <BudgetTool
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: BudgetTool,
         title: "Budgeting Tools",
     },
     {
-        icon: (
-            <BankBold
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: BankBold,
         title: "Comprehensive Banking",
     },
     {
-        icon: (
-            <SecurityBold
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: SecurityBold,
         title: "Enhanced Security",
     },
     {
-        icon: (
-            <PortfolioTracking
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: PortfolioTracking,
         title: "Portfolio Tracking",
     },
     {
-        icon: (
-            <FinanceSuiteBold
-                style={{ color: "#6f00eb", width: "40px", height: "40px" }}
-            />
-        ),
+        icon: FinanceSuiteBold,
         title: "Financial Suite",
     },
     {
-        icon: (
-            <Api style={{ color: "#6f00eb", width: "40px", height: "40px" }} />
-        ),
+        icon: Api,
         title: "API Integration",
     },
 ];
@@ -102,7 +73,7 @@ const FinancialSuccess = () => {
                             {features.map((feature, index) => (
                                 <Grid key={index} size={{ md: 3 }}>
                                     <FeatureCard
-                                        icon={feature.icon}
+                                        Icon={feature.icon}
                                         heading={feature.title}
                                         headVariant="h6"
                                         cardStyleProps={{
