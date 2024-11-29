@@ -1,14 +1,9 @@
-import {
-    Box,
-    Button,
-    Container,
-    Stack,
-    TextField,
-    Typography,
-} from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { HandMobile } from "../../../assets";
+import { useNavigate } from "react-router-dom";
 
 const SubscribeNewsletter = () => {
+    const navigate = useNavigate();
     return (
         <Box sx={{ py: 10 }}>
             <Container maxWidth="lg">
@@ -29,36 +24,15 @@ const SubscribeNewsletter = () => {
                             frontiers, our APIs unleash the true power of
                             payments for your business
                         </Typography>
-                        <TextField
-                            variant="outlined"
-                            fullWidth
-                            placeholder="Search here..."
-                            slotProps={{
-                                input: {
-                                    endAdornment: (
-                                        <Button
-                                            variant="contained"
-                                            color="secondary"
-                                            sx={{
-                                                ":hover": {
-                                                    color: "white",
-                                                },
-                                            }}
-                                            onClick={() =>
-                                                console.log("Button clicked!")
-                                            }
-                                        >
-                                            Submit
-                                        </Button>
-                                    ),
-                                },
-                            }}
-                            sx={{
-                                "& .MuiOutlinedInput-root": {
-                                    borderRadius: "8px",
-                                },
-                            }}
-                        />
+                        <Box>
+                            <Button
+                                variant="outlined"
+                                sx={{ bgcolor: "white", color: "#110d34" }}
+                                onClick={() => navigate("contact-us")}
+                            >
+                                Contact us
+                            </Button>
+                        </Box>
                     </Stack>
 
                     <img

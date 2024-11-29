@@ -2,6 +2,11 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import FeatureCard from "../../cards/FeatureCard";
 import BgColorLayout from "../../layout/BgColorLayout";
 import TestimonialSlider from "../../slider/TestimonialSlider";
+import {
+    AdaptiveAccountFeaturesIcon,
+    CustomerRelationIcon,
+    FinanceSuiteBold,
+} from "../../../assets";
 
 const Testimonial = () => {
     return (
@@ -17,7 +22,7 @@ const Testimonial = () => {
                     <Stack spacing={4}>
                         <Stack flexDirection={"row"} columnGap={14}>
                             <FeatureCard
-                                icon="icon"
+                                Icon={AdaptiveAccountFeaturesIcon}
                                 heading="Streamline Your Accounting Processes"
                                 subheading="Simplify your financial management and save valuable time and effort with our automated bookkeeping solutions."
                                 cardStyleProps={{
@@ -54,9 +59,9 @@ const Testimonial = () => {
                         </Stack>
                         <Stack direction={"row"} columnGap={5}>
                             <FeatureCard
-                                icon="icon"
-                                heading="Streamline Your Accounting Processes"
-                                subheading="Simplify your financial management and save valuable time and effort with our automated bookkeeping solutions."
+                                Icon={FinanceSuiteBold}
+                                heading="Gain Control Over Your Finances"
+                                subheading="Stay in complete control of your finances by accessing real-time insights into your cash flow, ensuring you make informed decisions."
                                 cardStyleProps={{
                                     minWidth: "413px",
                                     minHeight: "350px",
@@ -72,9 +77,9 @@ const Testimonial = () => {
                                 }}
                             />
                             <FeatureCard
-                                icon="icon"
-                                heading="Streamline Your Accounting Processes"
-                                subheading="Simplify your financial management and save valuable time and effort with our automated bookkeeping solutions."
+                                Icon={CustomerRelationIcon}
+                                heading="Enhance Customer Relations"
+                                subheading="Boost customer satisfaction with our lightning-fast invoicing and efficient payment tracking system, making your interactions smoother and more enjoyable."
                                 cardStyleProps={{
                                     minWidth: "413px",
                                     minHeight: "350px",

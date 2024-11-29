@@ -1,28 +1,31 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FeatureCard from "../../cards/FeatureCard";
+import { FintechIcon, SecurityRelationshipsIcon } from "../../../assets";
 
 const SecurePayments = () => {
     return (
         <Container maxWidth="md" sx={{ my: 10 }}>
             <Grid container spacing={4}>
                 <Grid size={12}>
-                    <Typography variant="h2">
-                        Uncover the Secure Payments Gold Standard
-                    </Typography>
-                    <Typography component={"p"}>
-                        Born from a payment innovation passion, [Website Name]
-                        ensures seamless, secure transactions, empowering
-                        businesses with a focus on security, innovation, and
-                        customer satisfaction. We&apos;re your trusted payment
-                        solutions partner.
-                    </Typography>
+                    <Stack textAlign="center">
+                        <Typography variant="h2">
+                            Uncover the Secure Payments Gold Standard
+                        </Typography>
+                        <Typography component={"p"} variant="body1">
+                            Born from a payment innovation passion, [Website
+                            Name] ensures seamless, secure transactions,
+                            empowering businesses with a focus on security,
+                            innovation, and customer satisfaction. We&apos;re
+                            your trusted payment solutions partner.
+                        </Typography>
+                    </Stack>
                 </Grid>
                 <Grid size={12}>
                     <Grid container spacing={20}>
                         <Grid size={{ sm: 12, md: 6 }}>
                             <FeatureCard
-                                icon="icon"
+                                Icon={SecurityRelationshipsIcon}
                                 heading="Our Dedication to Security and Relationships"
                                 subheading="Our commitment is to provide our customers and employees with the utmost in secure payment solutions, fostering enduring connections."
                                 cardStyleProps={{
@@ -40,7 +43,7 @@ const SecurePayments = () => {
                         </Grid>
                         <Grid size={{ sm: 12, md: 6 }}>
                             <FeatureCard
-                                icon="icon"
+                                Icon={FintechIcon}
                                 heading="Our Path to World-Class Fintech Excellence"
                                 subheading="Embracing a customer-centric approach and delivering value to our stakeholders, employees, and customers will propel us to excel as a global fintech leader."
                                 cardStyleProps={{

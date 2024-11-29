@@ -208,3 +208,7 @@ export { AccurateRecordsIcon } from "./svg/AccurateRecordsIcon";
 export { GrowthPartnershipIcon } from "./svg/GrowthPartnershipIcon";
 export { ObservanceIcon } from "./svg/ObservanceIcon";
 export { StrategicInsightsIcon } from "./svg/StrategicInsightsIcon";
+
+export { FintechIcon } from "./svg/FintechIcon";
+export { SecurityRelationshipsIcon } from "./svg/SecurityRelationshipsIcon";
+export { CustomerRelationIcon } from "./svg/CustomerRelationIcon";

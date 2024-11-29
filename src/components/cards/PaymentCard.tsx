@@ -1,11 +1,18 @@
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import { Divider, Stack, Typography } from "@mui/material";
 import { PaymentOption } from "../../constant/paymentOptions";
+import { SealCheckBold } from "../../assets";
 
-const PaymentCard = ({ option }: { option: PaymentOption }) => {
+import { motion } from "motion/react";
+
+const PaymentCard = ({
+    option,
+    isMonthly,
+}: {
+    option: PaymentOption;
+    isMonthly: boolean;
+}) => {
     return (
         <Card
             sx={{
@@ -17,15 +24,55 @@ const PaymentCard = ({ option }: { option: PaymentOption }) => {
         >
             <CardContent>
                 <Stack spacing={2}>
-                    <Stack flexDirection={"row"}>
-                        <Typography
-                            variant="h3"
-                            fontWeight={"bold"}
-                            color="white"
+                    <Stack flexDirection={"row"} alignItems={"flex-end"}>
+                        {/* Animate the price text */}
+                        <motion.div
+                            key={isMonthly ? "yearly" : "monthly"}
+                            initial={{
+                                opacity: 0,
+                                transform: "translateY(10px)",
+                            }}
+                            animate={{
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                            }}
+                            exit={{
+                                opacity: 0,
+                                transform: "translateY(-10px)",
+                            }}
+                            transition={{ duration: 0.3 }}
                         >
-                            ₹{option.pricing.monthly}
-                        </Typography>
-                        <Typography color="white">/month</Typography>
+                            <Typography
+                                variant="h3"
+                                fontWeight={"bold"}
+                                color="white"
+                            >
+                                ₹
+                                {!isMonthly
+                                    ? option.pricing.monthly
+                                    : option.pricing.yearly}
+                            </Typography>
+                        </motion.div>
+                        <motion.div
+                            key={isMonthly ? "year" : "month"}
+                            initial={{
+                                opacity: 0,
+                                transform: "translateY(10px)",
+                            }}
+                            animate={{
+                                opacity: 1,
+                                transform: "translateY(0px)",
+                            }}
+                            exit={{
+                                opacity: 0,
+                                transform: "translateY(-10px)",
+                            }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <Typography color="white">
+                                /{!isMonthly ? "month" : "year"}
+                            </Typography>
+                        </motion.div>
                     </Stack>
                     <Stack>
                         <Typography variant="h6" color="white">
@@ -33,27 +80,73 @@ const PaymentCard = ({ option }: { option: PaymentOption }) => {
                         </Typography>
                     </Stack>
                     <Divider />
-                    <Stack>
+                    <Stack spacing={4}>
                         <Typography variant="h6" color="white">
                             What&apos;s included?
                         </Typography>
-                        {option.features.map((feature, idx) => (
-                            <Stack
-                                key={idx}
-                                flexDirection={"row"}
-                                alignItems="center"
-                            >
-                                <Typography color="white">{feature}</Typography>
+                        <motion.div
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            variants={{
+                                hidden: {
+                                    opacity: 0,
+                                    transform: "translateY(10px)",
+                                },
+                                visible: {
+                                    opacity: 1,
+                                    transform: "translateY(0px)",
+                                },
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                staggerChildren: 0.2, // Stagger the animations for each feature
+                            }}
+                        >
+                            <Stack spacing={2}>
+                                {option.features.map((feature, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        variants={{
+                                            hidden: {
+                                                opacity: 0,
+                                                transform: "translateY(10px)",
+                                            },
+                                            visible: {
+                                                opacity: 1,
+                                                transform: "translateY(0px)",
+                                            },
+                                        }}
+                                        transition={{
+                                            duration: 0.5,
+                                            delay: idx * 0.2, // Delay each feature's animation based on its index
+                                        }}
+                                    >
+                                        <Stack
+                                            flexDirection={"row"}
+                                            alignItems="center"
+                                            columnGap={2}
+                                        >
+                                            <SealCheckBold
+                                                height={20}
+                                                width={20}
+                                                color="white"
+                                            />
+                                            <Typography
+                                                fontWeight={"bold"}
+                                                variant="body1"
+                                                color="white"
+                                            >
+                                                {feature}
+                                            </Typography>
+                                        </Stack>
+                                    </motion.div>
+                                ))}
                             </Stack>
-                        ))}
+                        </motion.div>
                     </Stack>
                 </Stack>
             </CardContent>
-            <CardActions>
-                <Button size="small" variant="contained">
-                    Learn More
-                </Button>
-            </CardActions>
         </Card>
     );
 };
